@@ -14,8 +14,19 @@ class CreateChudekhuyenmaiTable extends Migration
     public function up()
     {
         Schema::create('chudekhuyenmai', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('cdkm_giaTri', 10);
+            $table->unsignedTinyInteger('cdkm_trangThai')
+                ->default('0');
+            $table->string('km_maFK', 20);
+            $table->string('cd_maFK', 20);
+
+            $table->foreign('km_maFK')
+                ->reference('km_ma')->on('khuyenmai');
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('cd_maFK')
+                ->reference('cd_ma')->on('chude');
+                ->onDelete('cascade')->onUpdate('cascade');
+
         });
     }
 

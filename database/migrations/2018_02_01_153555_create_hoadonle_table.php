@@ -14,8 +14,22 @@ class CreateHoadonleTable extends Migration
     public function up()
     {
         Schema::create('hoadonle', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('hdl_ma', 20);
+            $table->string('hdl_nguoiMuaHang', 50);
+            $table->string('hdl_dienThoai', 15);
+            $table->string('hdl_diaChi', 250);
+            $table->string('nv_lapHoaDon', 20);
+            $table->dateTime('hdl_ngayXuatHoaDon')
+                ->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('dh_maFK', 20);
+
+            $table->primary(['hdl_ma']);
+            $table->foreign('dh_maFK')
+                ->reference('dh_ma')->on('donhang');
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('nv_lapHoaDon')
+                ->reference('nv_ma')->on('nhanvien');
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

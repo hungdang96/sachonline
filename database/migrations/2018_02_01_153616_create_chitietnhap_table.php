@@ -14,8 +14,17 @@ class CreateChitietnhapTable extends Migration
     public function up()
     {
         Schema::create('chitietnhap', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->unsignedInteger('ctn_soLuong');
+            $table->unsignedInteger('ctn_donGia');
+            $table->string('s_maFK', 20);
+            $table->string('pn_maFK', 20);
+
+            $table->foreign('s_maFK')
+                ->reference('s_ma')->on('sach');
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('pn_maFK')
+                ->reference('pn_ma')->on('phieunhap');
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

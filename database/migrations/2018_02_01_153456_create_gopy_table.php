@@ -14,8 +14,19 @@ class CreateGopyTable extends Migration
     public function up()
     {
         Schema::create('gopy', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->unsignedInteger('gy_ma')->autoIncrement();
+            $table->timestamp('gy_thoiGian')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->text('gy_noiDung');
+            $table->string('s_maFK', 20);
+            $table->string('kh_maFK', 20);
+
+            $table->primary(['gy_ma']);
+            $table->foreign('s_maFK')
+                ->reference('s_ma')->on('sach')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('kh_maFK')
+                ->reference('kh_ma')->on('khachhang')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

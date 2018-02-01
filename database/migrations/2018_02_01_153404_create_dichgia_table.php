@@ -14,8 +14,19 @@ class CreateDichgiaTable extends Migration
     public function up()
     {
         Schema::create('dichgia', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('dg_ma', 20);
+            $table->string('dg_ten', 100);
+            $table->timestamp('dg_taoMoi')
+                ->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('dg_capNhat')
+                ->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('s_maFK', 20);
+
+            $table->unique(['dg_ten']);
+            $table->primary(['dg_ma']);
+            $table->foreign('s_maFK')
+                ->reference('s_sku')->on('sach')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
