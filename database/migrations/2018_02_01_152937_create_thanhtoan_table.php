@@ -14,8 +14,15 @@ class CreateThanhtoanTable extends Migration
     public function up()
     {
         Schema::create('thanhtoan', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('tt_ma', 20);
+            $table->string('tt_ten', 200);
+            $table->string('tt_dienGiai', 100);
+            $table->timestamps('tt_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamps('tt_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->unsignedTinyInteger('tt_trangThai')->default('2');
+            $table->string('dh_maFK', 20);
+            $table->primary('tt_ma');
+            $table->foreign('dh_maFK')->references('dh_ma')->on('donhang');
         });
     }
 

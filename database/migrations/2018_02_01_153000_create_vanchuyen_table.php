@@ -14,8 +14,14 @@ class CreateVanchuyenTable extends Migration
     public function up()
     {
         Schema::create('vanchuyen', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('vc_ma', 20);
+            $table->string('vc_ten', 200);
+            $table->unsignedInteger('vc_chiPhi')->default('0');
+            $table->text('vc_dienGiai');
+            $table->timestamps('vc_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamps('vc_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->unsignedTinyInteger('vc_trangThai')->default('2');
+            $table->primary('vc_ma');
         });
     }
 
