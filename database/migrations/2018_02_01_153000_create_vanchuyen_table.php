@@ -21,6 +21,7 @@ class CreateVanchuyenTable extends Migration
             $table->timestamps('vc_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps('vc_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('vc_trangThai')->default('2');
+            
             $table->primary('vc_ma');
         });
     }

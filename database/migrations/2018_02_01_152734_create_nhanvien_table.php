@@ -27,9 +27,11 @@ class CreateNhanvienTable extends Migration
             $table->timestamps('nv_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('nv_trangThai')->default('2');
             $table->string('q_maFK', 10);
+
             $table->unique(['nv_email', 'nv_taiKhoan']);
             $table->primary('nv_ma');
-            $table->foreign('q_maFK')->references('q_ma')->on('quyen');
+            $table->foreign('q_maFK')->references('q_ma')->on('quyen')
+                ->onDelete('cascade')->onUpdate('cascade');
 
 
         });

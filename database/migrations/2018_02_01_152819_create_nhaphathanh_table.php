@@ -15,7 +15,7 @@ class CreateNhaphathanhTable extends Migration
     {
         Schema::create('nhaphathanh', function (Blueprint $table) {
             $table->string('nph_ma', 20);
-            $table->string('nph_ten', 200);
+            $table->string('nph_ten', 100);
             $table->string('nph_daiDien', 100);
             $table->string('nph_diaChi', 250);
             $table->string('nph_dienThoai', 15);
@@ -23,7 +23,8 @@ class CreateNhaphathanhTable extends Migration
             $table->timestamps('nph_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps('nph_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('nph_trangThai')->default('2');
-            $table->unique(['nhp_email']);
+
+            $table->unique(['nph_ten','nhp_email','nph_dienThoai']);
             $table->primary('nph_ma');
         });
     }
