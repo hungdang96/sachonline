@@ -14,8 +14,11 @@ class CreateNhaxuatbanTable extends Migration
     public function up()
     {
         Schema::create('nhaxuatban', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('nxb_ma', 20);
+            $table->string('nxb_ten', 100);
+            $table->string('nxb_diaChi', 250);
+
+            $table->primary('nxb_ma');
         });
     }
 
