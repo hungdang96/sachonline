@@ -20,6 +20,7 @@ class CreateQuyenTable extends Migration
             $table->timestamps('q_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps('q_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('q_trangThai')->default('2');
+            
             $table->unique(['q_ten']);
             $table->primary('q_ma');
         });
