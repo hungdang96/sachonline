@@ -14,8 +14,33 @@ class CreateSachTable extends Migration
     public function up()
     {
         Schema::create('sach', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('s_sku', 20);
+            $table->string('s_ten', 100);
+            $table->unsignedInteger('s_giaGoc');
+            $table->unsignedInteger('s_giaBan');
+            $table->unsignedInteger('s_soTrang');
+            $table->dateTime('s_namXuatBan');
+            $table->timestamp('s_tao')
+                ->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('s_capNhat')
+                ->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('s_kichThuoc', 10);
+            $table->unsignedInteger('s_danhGia');
+            $table->string('s_loaiBia', 10);
+            $table->unsignedSmallInteger('s_trangThai')
+                ->default('1');
+            $table->text('s_gioiThieu');
+            $table->string('nxb_maFK', 20);
+            $table->string('l_maFK', 20);
+            $table->string('nn_maFK', 20);
+
+            $table->primary('s_sku');
+            $table->foreign('nxb_maFK')->reference('nxb_ma')
+                ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('nxb_maFK')->reference('nxb_ma')
+                ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('nxb_maFK')->reference('nxb_ma')
+                ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
