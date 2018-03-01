@@ -23,8 +23,8 @@ class CreateNhanvienTable extends Migration
             $table->dateTime('nv_ngaySinh')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->string('nv_diaChi', 250);
             $table->string('nv_sdt', 15);
-            $table->timestamps('nv_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamps('nv_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('nv_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('nv_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('nv_trangThai')->default('2');
             $table->string('q_maFK', 10);
 

@@ -20,8 +20,8 @@ class CreateNhaphathanhTable extends Migration
             $table->string('nph_diaChi', 250);
             $table->string('nph_dienThoai', 15);
             $table->string('nph_email', 100);
-            $table->timestamps('nph_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamps('nph_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('nph_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('nph_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('nph_trangThai')->default('2');
 
             $table->unique(['nph_ten','nhp_email','nph_dienThoai']);

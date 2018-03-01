@@ -14,8 +14,10 @@ class CreateNgonnguTable extends Migration
     public function up()
     {
         Schema::create('ngonngu', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('nn_ma', 20);
+            $table->string('nn_ten', 50);
+
+            $table->primary(['nn_ma']);
         });
     }
 

@@ -26,8 +26,8 @@ class CreateKhuyenmaiTable extends Migration
             $table->dateTime('km_ngayKyNhay')->default(NULL);
             $table->string('nv_kyDuyet', 20);
             $table->dateTime('km_ngayDuyet')->default(NULL);
-            $table->timestamps('km_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamps('km_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('km_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('km_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('km_trangThai')->default('2');
             
 

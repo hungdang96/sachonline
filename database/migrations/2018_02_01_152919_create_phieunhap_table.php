@@ -24,8 +24,8 @@ class CreatePhieunhapTable extends Migration
             $table->dateTime('pn_ngayXacNhan')->default(NULL);
             $table->string('nv_thuKho', 20);
             $table->dateTime('pn_ngayNhapKho')->default(NULL);
-            $table->timestamps('pn_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamps('pn_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('pn_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('pn_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('pn_trangThai')->default('2');
             $table->string('nph_maFK', 20);
 
