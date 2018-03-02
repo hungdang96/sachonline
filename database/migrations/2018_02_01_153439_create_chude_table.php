@@ -28,7 +28,7 @@ class CreateChudeTable extends Migration
             $table->unique(['cd_ten']);
             $table->primary(['cd_ma']);
             $table->foreign('s_maFK')
-                ->reference('s_ma')->on('sach')
+                ->references('s_ma')->on('sach')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

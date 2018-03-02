@@ -20,10 +20,10 @@ class CreateChitietnhapTable extends Migration
             $table->string('pn_maFK', 20);
 
             $table->foreign('s_maFK')
-                ->reference('s_ma')->on('sach');
+                ->references('s_ma')->on('sach')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('pn_maFK')
-                ->reference('pn_ma')->on('phieunhap');
+                ->references('pn_ma')->on('phieunhap')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

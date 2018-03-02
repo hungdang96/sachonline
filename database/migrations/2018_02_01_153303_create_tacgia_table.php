@@ -25,7 +25,7 @@ class CreateTacgiaTable extends Migration
 
             $table->unique('tg_ten');
             $table->primary('tg_ma');
-            $table->foreign('s_maFK')->reference('s_ma')
+            $table->foreign('s_maFK')->references('s_ma')
                 ->on('sach')->onDelete('cascade')->onUpdate('cascade');
         });
     }

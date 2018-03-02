@@ -35,11 +35,11 @@ class CreateSachTable extends Migration
             $table->string('nn_maFK', 20);
 
             $table->primary('s_sku');
-            $table->foreign('nxb_maFK')->reference('nxb_ma')
+            $table->foreign('nxb_maFK')->references('nxb_ma')
                 ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('nxb_maFK')->reference('nxb_ma')
+            $table->foreign('nxb_maFK')->references('nxb_ma')
                 ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('nxb_maFK')->reference('nxb_ma')
+            $table->foreign('nxb_maFK')->references('nxb_ma')
                 ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
         });
     }

@@ -25,7 +25,7 @@ class CreateDichgiaTable extends Migration
             $table->unique(['dg_ten']);
             $table->primary(['dg_ma']);
             $table->foreign('s_maFK')
-                ->reference('s_sku')->on('sach')
+                ->references('s_sku')->on('sach')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

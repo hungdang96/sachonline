@@ -21,10 +21,10 @@ class CreateChudekhuyenmaiTable extends Migration
             $table->string('cd_maFK', 20);
 
             $table->foreign('km_maFK')
-                ->reference('km_ma')->on('khuyenmai');
+                ->references('km_ma')->on('khuyenmai')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('cd_maFK')
-                ->reference('cd_ma')->on('chude');
+                ->references('cd_ma')->on('chude')
                 ->onDelete('cascade')->onUpdate('cascade');
 
         });

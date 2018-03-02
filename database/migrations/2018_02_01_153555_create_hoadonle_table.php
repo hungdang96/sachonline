@@ -25,10 +25,10 @@ class CreateHoadonleTable extends Migration
 
             $table->primary(['hdl_ma']);
             $table->foreign('dh_maFK')
-                ->reference('dh_ma')->on('donhang');
+                ->references('dh_ma')->on('donhang')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('nv_lapHoaDon')
-                ->reference('nv_ma')->on('nhanvien');
+                ->references('nv_ma')->on('nhanvien')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }
