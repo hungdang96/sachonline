@@ -18,9 +18,8 @@ class CreateHinhanhTable extends Migration
             $table->string('ha_ten', 150);
             $table->string('s_maFK', 20);
 
-            $table->primary(['ha_ma']);
             $table->foreign('s_maFK')
-                ->references('s_ma')->on('sach')
+                ->references('s_sku')->on('sach')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

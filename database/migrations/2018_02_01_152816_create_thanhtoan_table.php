@@ -23,8 +23,6 @@ class CreateThanhtoanTable extends Migration
             $table->string('dh_maFK', 20);
 
             $table->primary('tt_ma');
-            $table->foreign('dh_maFK')->references('dh_ma')->on('donhang')
-                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

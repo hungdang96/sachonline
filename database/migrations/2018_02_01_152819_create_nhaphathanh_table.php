@@ -24,7 +24,7 @@ class CreateNhaphathanhTable extends Migration
             $table->timestamp('nph_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('nph_trangThai')->default('2');
 
-            $table->unique(['nph_ten','nhp_email','nph_dienThoai']);
+            $table->unique(['nph_ten','nph_email','nph_dienThoai']);
             $table->primary('nph_ma');
         });
     }

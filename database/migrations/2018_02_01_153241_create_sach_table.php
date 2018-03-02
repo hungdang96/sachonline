@@ -31,16 +31,16 @@ class CreateSachTable extends Migration
                 ->default('1');
             $table->text('s_gioiThieu');
             $table->string('nxb_maFK', 20);
-            $table->string('l_maFK', 20);
+            $table->string('tl_maFK', 20);
             $table->string('nn_maFK', 20);
 
             $table->primary('s_sku');
             $table->foreign('nxb_maFK')->references('nxb_ma')
                 ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('nxb_maFK')->references('nxb_ma')
-                ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('nxb_maFK')->references('nxb_ma')
-                ->on('nhaxuatban')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('tl_maFK')->references('tl_ma')
+                ->on('theloai')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('nn_maFK')->references('nn_ma')
+                ->on('ngonngu')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
