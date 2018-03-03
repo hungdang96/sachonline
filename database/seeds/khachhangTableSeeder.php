@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\PhpVnDataGenerator\VnBase;
-use Illuminate\PhpVnDataGenerator\VnFullname;
-use Illuminate\PhpVnDataGenerator\VnPersonalInfo;
+use Illuminate\Database\PhpVnDataGenerator\VnBase;
+use Illuminate\Database\PhpVnDataGenerator\VnFullname;
+use Illuminate\Database\PhpVnDataGenerator\VnPersonalInfo;
 
-class khachhang extends Seeder
+class khachhangTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
