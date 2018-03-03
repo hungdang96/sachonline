@@ -5,7 +5,7 @@ use Illuminate\PhpVnDataGenerator\VnBase;
 use Illuminate\PhpVnDataGenerator\VnFullname;
 use Illuminate\PhpVnDataGenerator\VnPersonalInfo;
 
-class khachhang extends Seeder
+class nhanvien extends Seeder
 {
     /**
      * Run the database seeds.
@@ -60,7 +60,7 @@ class khachhang extends Seeder
         }
         $today = new DateTime('2018-03-03 9:00:00');
         for($i = 0; $i < $nCustomer; $i++){
-            $id_temp = $faker->bothify('KH-##???-###??-##?#?');
+            $id_temp = $faker->bothify('NV-##?#??');
             $id = $faker->toUpper($id_temp);
             //Lay gioi tinh cua khach hang thu i
             if($customer[$i]["gender"]==0){
@@ -86,21 +86,28 @@ class khachhang extends Seeder
             $sdt = $uPI->Mobile("",VnBase::VnFalse);
             //sinh ngau nhien
             $address = $uPI->Address();
-            array_push($list,[
-                'kh_ma' => $id,
-                'kh_taiKhoan' => $usr,
-                'kh_matKhau' => $pwd,
-                'kh_hoTen' => $name,
-                'kh_gioiTinh' => $gender,
-                'kh_email' => $email,
-                'kh_ngaySinh' => $birthDay["birthdate"],
-                'kh_diaChi' => $address,
-                'kh_soDienThoai' => $sdt,
-                'kh_taoMoi' => $today->format('Y-m-d H:i:s'),
-                'kh_capNhat' => $today->format('Y-m-d H:i:s'),
-                'kh_trangThai' => ($i <= $nCustomer-3? 2: 3)
+            //Ma quyen
+            if($i == 0){
+                $quyenMa = 1;
+            }else{
+                $quyenMa = $faker->numberBetween(2,6);
+            }
+            array_push($list, [
+                'nv_ma' => $id,
+                'nv_taiKhoan' => $usr,
+                'nv_matKhau' => $pwd,
+                'nv_hoTen' => $name,
+                'nv_gioiTinh' => $gender,
+                'nv_email' => $email,
+                'nv_ngaySinh' => $birthDay["birthdate"],
+                'nv_diaChi' => $address,
+                'nv_sdt' => $sdt,
+                'nv_tao' => $today->format('Y-m-d H:i:s'),
+                'nv_capNhat' => $today->format('Y-m-d H:i:s'),
+                'nv_trangThai' => '1',
+                'q_maFK' => $quyenMa
             ]);
         }
-        DB::table('khachhang')->insert($list);
+        DB::table('nhanvien')->insert($list);
     }
 }

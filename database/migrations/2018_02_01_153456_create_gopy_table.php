@@ -20,9 +20,8 @@ class CreateGopyTable extends Migration
             $table->string('s_maFK', 20);
             $table->string('kh_maFK', 20);
 
-            $table->primary(['gy_ma']);
             $table->foreign('s_maFK')
-                ->references('s_ma')->on('sach')
+                ->references('s_sku')->on('sach')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('kh_maFK')
                 ->references('kh_ma')->on('khachhang')
