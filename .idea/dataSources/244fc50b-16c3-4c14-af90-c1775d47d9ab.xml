@@ -1776,7 +1776,7 @@ kh_soDienThoai</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="258" name="km_giaiTri">
+    <column id="391" parent="258" name="km_giaTri">
       <Position>6</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
