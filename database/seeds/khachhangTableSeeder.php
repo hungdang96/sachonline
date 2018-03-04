@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\PhpVnDataGenerator\VnBase;
-use Illuminate\Database\PhpVnDataGenerator\VnFullname;
-use Illuminate\Database\PhpVnDataGenerator\VnPersonalInfo;
+use Illuminate\PhpVnDataGenerator\VnBase;
+use Illuminate\PhpVnDataGenerator\VnFullname;
+use Illuminate\PhpVnDataGenerator\VnPersonalInfo;
 
 class khachhangTableSeeder extends Seeder
 {
