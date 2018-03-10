@@ -13,7 +13,9 @@ class hoadonleController extends Controller
      */
     public function index()
     {
-        //
+        $ds_hoadonle = hoadonle::all();
+        $json = json_encode($ds_hoadonle);
+        return response(['error' => false, 'message' => compact('ds_hoadonle', 'json')], 200);
     }
 
     /**
@@ -23,7 +25,7 @@ class hoadonleController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.hoadonle.create');
     }
 
     /**
@@ -34,7 +36,15 @@ class hoadonleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $hoadonle = new hoadonle();
+        $hoadonle->hdl_ma = $request->hdl_ma;
+        $hoadonle->hdl_nguoiMuaHang = $request->hdl_nguoiMuaHang;
+        $hoadonle->hdl_dienThoai = $request->hdl_dienThoai;
+        $hoadonle->hdl_diaChi = $request->hdl_diaChi;
+        $hoadonle->nv_lapHoaDon = $request->nv_lapHoaDon;
+        $hoadonle->save();
+
+        return response(['error' => false, 'message' => $hoadonle->toJon()], 200);
     }
 
     /**
@@ -45,7 +55,13 @@ class hoadonleController extends Controller
      */
     public function show($id)
     {
-        //
+        $hoadonle = hoadonle::where("hdl_ma", $id)->first();
+        return response([
+            'error' => $hoadonle == null,
+            'message' => ($hoadonle == null?
+                            "Khong tim thay hoa don le [{$id}]":
+                            $hoadonle -> toJon())
+        ], 200);
     }
 
     /**
@@ -56,7 +72,15 @@ class hoadonleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $hoadonle = hoadonle::where("hdl_ma", $id)->first();
+        $result = [
+            'error' => $hoadonle == null,
+            'message' => ($hoadonle == null?
+                            "Khong tim thay hoa don le [{$id}]":
+                            $hoadonle-> toJon())
+        ];
+
+        return View('cusc_qt.hoadonle.edit', ['result' => $result]);
     }
 
     /**
@@ -68,7 +92,26 @@ class hoadonleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $hoadonle = hoadonle::where("hdl_ma", $id)->first();
+        if ($hoadonle){
+            $hoadonle->hdl_ma = $request->hdl_ma;
+            $hoadonle->hdl_nguoiMuaHang = $request->hdl_nguoiMuaHang;
+            $hoadonle->hdl_dienThoai = $request->hdl_dienThoai;
+            $hoadonle->hdl_diaChi = $request->hdl_diaChi;
+            $hoadonle->nv_lapHoaDon = $request->nv_lapHoaDon;
+            $hoadonle->hdl_ngayXuatHoaDon = $request->hdl_ngayXuatHoaDon;
+            $hoadonle->save();
+
+            return response([
+                    'error' => true.
+                    'message'=> $hoadonle->toJon()
+            ], 200);
+        } else{
+            return response([
+                    'error' => true.
+                    'message'=> "Khong tim thay hoa don le [{$id}]"
+            ], 200);
+        }
     }
 
     /**
@@ -79,6 +122,18 @@ class hoadonleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hoadonle = hoadonle::where("hdl_ma", $id)->first();
+        if ($hoadonle){
+            $hoadonle->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xoa hoa don le [{$id}] thanh cong"
+                ], 200);
+        } else{
+            return response([
+                    'error' => true.
+                    'message'=> "Khong tim thay hoa don le [{$id}]"
+            ], 200);
+        }
     }
 }

@@ -13,7 +13,9 @@ class ngonnguController extends Controller
      */
     public function index()
     {
-        //
+        $ds_ngonngu = ngonngu::all();
+        $json = json_encode($ds_ngonngu);
+        return response(['error' => false, 'message' => compact('ds_ngonngu', 'json')], 200);
     }
 
     /**
@@ -23,7 +25,7 @@ class ngonnguController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.ngonngu.create');
     }
 
     /**
@@ -34,7 +36,12 @@ class ngonnguController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ngonngu = new ngonngu();
+        $ngonngu->nn_ma = $response->nn_ma;
+        $ngonngu->nn_ten = $response->nn_ten;
+        $ngonngu->save();
+
+        return response(['error' => false, 'message' => $ngonngu->toJon()], 200);
     }
 
     /**
@@ -45,7 +52,13 @@ class ngonnguController extends Controller
      */
     public function show($id)
     {
-        //
+        $ngonngu = ngonngu::where("nn_ma", $id)->first();
+        return response([
+            'error' => $ngonngu == null,
+            'message' => ($ngonngu == null?
+                            "Khong tim thay ngon ngu [{$id}]":
+                            $ngonngu -> toJon())
+        ], 200);
     }
 
     /**
@@ -56,7 +69,15 @@ class ngonnguController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ngonngu = ngonngu::where("nn_ma", $id)->first();
+        $result = [
+            'error' => $ngonngu == null,
+            'message' => ($ngonngu == null?
+                            "Khong tim thay ngon ngu [{$id}]":
+                            $ngonngu-> toJon())
+        ];
+
+        return View('cusc_qt.ngonngu.edit', ['result' => $result]);
     }
 
     /**
@@ -68,7 +89,21 @@ class ngonnguController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ngonngu = ngonngu::where("nn_ma", $id)->first();
+        if ($ngonngu){
+            $ngonngu->nn_ma = $response->nn_ma;
+            $ngonngu->nn_ten = $response->nn_ten;
+            $ngonngu->save();
+            return response([
+                    'error' => true.
+                    'message'=> $ngonngu->toJon()
+            ], 200);
+        } else{
+            return response([
+                    'error' => true.
+                    'message'=> "Khong tim thay ngon ngu [{$id}]"
+            ], 200);
+        }
     }
 
     /**
@@ -79,6 +114,19 @@ class ngonnguController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ngonngu = ngonngu::where("nn_ma", $id)->first();
+        if ($ngonngu){
+            $ngonngu->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xoa ngon ngu [{$id}] thanh cong"
+                ], 200);
+        } else{
+            return response([
+                    'error' => true.
+                    'message'=> "Khong tim thay ngon ngu [{$id}]"
+            ], 200);
+        }
+    }
     }
 }
