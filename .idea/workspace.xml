@@ -3,28 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f182ae22-a575-4c03-90e3-dd1ea66bc587" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChitietdonhangController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChitietdonhangController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChitietnhapController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChitietnhapController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChudeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChudeController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChudekhuyenmaiController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChudekhuyenmaiController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DichgiaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DichgiaController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DonhangController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DonhangController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GopyController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GopyController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HoadonleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HoadonleController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KhuyenmaiController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/KhuyenmaiController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NgonnguController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NgonnguController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NhanvienController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NhanvienController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NhaphathanhController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NhaphathanhController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NhaxuatbanController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NhaxuatbanController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PhieunhapController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PhieunhapController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuyenController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuyenController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TacgiaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TacgiaController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThanhtoanController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThanhtoanController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TheloaiController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TheloaiController.php" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +50,18 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="quyenController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/quyenController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <replaceStrings>
@@ -122,6 +111,7 @@
         <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ChudeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/quyenController.php" />
       </list>
     </option>
   </component>
@@ -275,7 +265,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="Console" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.data.extractors.current.id" value="Tab-separated (TSV)_id" />
@@ -330,17 +320,18 @@
       <workItem from="1520148224786" duration="72000" />
       <workItem from="1520391523039" duration="3000" />
       <workItem from="1520513726326" duration="2284000" />
-      <workItem from="1520516747499" duration="96000" />
+      <workItem from="1520516747499" duration="1816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41475000" />
+    <option name="totallyTimeSpent" value="43195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16863587" sideWeight="0.49344262" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16863587" sideWeight="0.49344262" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819384" sideWeight="0.5023015" order="7" side_tool="true" content_ui="tabs" />
@@ -349,7 +340,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25489068" sideWeight="0.5065574" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24971232" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32750583" sideWeight="0.49769852" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25641027" sideWeight="0.49769852" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -395,20 +386,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153515_create_chitietdonhang_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153555_create_hoadonle_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153616_create_chitietnhap_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -625,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/quyen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/khachhang.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -697,6 +667,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/khachhangController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/chitietdonhangController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -705,10 +683,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/khachhangController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/phieunhapController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/quyen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/quyenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
