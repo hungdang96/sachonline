@@ -131,6 +131,5 @@ class gopyController extends Controller
                     'message'=> "Khong tim thay gop y [{$id}]"
             ], 200);
         }
-    }
-    
+    }  
 }

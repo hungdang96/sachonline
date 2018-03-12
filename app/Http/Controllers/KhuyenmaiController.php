@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use app\khuyenmai;
 use Illuminate\Http\Request;
 
 class khuyenmaiController extends Controller
@@ -147,6 +147,5 @@ class khuyenmaiController extends Controller
                     'message'=> "Khong tim thay khuyen mai [{$id}]"
             ], 200);
         }
-    }
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use app/nhaphathanh;
+use app\nhaphathanh;
 use Illuminate\Http\Request;
 
 class nhaphathanhController extends Controller
