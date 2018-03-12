@@ -13,7 +13,10 @@ class chitietdonhangController extends Controller
      */
     public function index()
     {
-        //
+        $ds_chitietdonhang = chitietdonhang::all();
+        $json = json_encode($ds_chitietdonhang);
+        return response([
+                'error' => false, 'message' => compact('ds_chitietdonhang', 'json')],200);
     }
 
     /**
@@ -23,7 +26,7 @@ class chitietdonhangController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.chitietdonhang.create');
     }
 
     /**
@@ -34,7 +37,13 @@ class chitietdonhangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $chitietdonhang = new chitietdonhang();
+        $chitietdonhang->ctdh_soLuong = $request->ctdh_soLuong;
+        $chitietdonhang->ctdh_donGia = $request->ctdh_donGia;
+        $chitietdonhang->s_ma = $request->s_ma;
+        $chude->save();
+        return response(['error' => false, 'message' => $chitietdonhang->toJson()], 200);
+
     }
 
     /**
@@ -45,7 +54,13 @@ class chitietdonhangController extends Controller
      */
     public function show($id)
     {
-        //
+        $chitietdonhang = chitietdonhang::where("s_ma", $id)->first();
+        return response([
+                'error' => $chitietdonhang == null,
+                'message' => ($chitietdonhang == null?
+                            "Không tìm thấy chitietdonhang[{$id}]":
+                            $chitietdonhang->toJson())
+            ], 200);
     }
 
     /**
@@ -56,7 +71,15 @@ class chitietdonhangController extends Controller
      */
     public function edit($id)
     {
-        //
+        $chitietdonhang = chitietdonhang::where("s_ma", $id)->first();
+        $result = [
+            'error' => $chitietdonhang == null,
+            'message' => ($chitietdonhang == null?
+                "Không tìm thấy chitietdonhang[{$id}]":
+                $chitietdonhang->toJson())
+        ];
+        return View('cusc_qt.chitietdonhang.edit', ['result' => $result]);
+
     }
 
     /**
@@ -68,7 +91,25 @@ class chitietdonhangController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $chitietdonhang = chitietdonhang::where("s_ma", $id)
+                            ->first();
+        if ($chitietdonhang) {
+            $chitietdonhang->ctdh_soLuong = $request->ctdh_soLuong;
+            $chitietdonhang->ctdh_donGia = $request->ctdh_donGia;
+            $chitietdonhang->s_ma = $request->s_ma;
+            $chitietdonhang->save();
+            return response([
+                    'error' => false,
+                    'message' => $chitietdonhang->toJson()
+                ], 200);
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy Chitietdonhang[{$id}]"
+                ], 200);
+        }
+
+        
     }
 
     /**
@@ -79,6 +120,18 @@ class chitietdonhangController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $chitietdonhang = chitietdonhang::where("s_ma", $id)->first();
+        if($chitietdonhang) {
+            $chitietdonhang->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xóa chitietdonhang[{$id}] thành công"], 200);
+
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy chitietdonhang[{$id}]"
+                ], 200);
+        }
     }
 }

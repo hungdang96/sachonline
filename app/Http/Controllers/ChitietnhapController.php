@@ -13,7 +13,10 @@ class chitietnhapController extends Controller
      */
     public function index()
     {
-        //
+        $ds_chitietnhap = chitietnhap::all();
+        $json = json_encode($ds_chitietnhap);
+        return response([
+                'error' => false, 'message' => compact('ds_chitietnhap', 'json')],200);
     }
 
     /**
@@ -23,7 +26,7 @@ class chitietnhapController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.chitietnhap.create');
     }
 
     /**
@@ -34,7 +37,13 @@ class chitietnhapController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $chitietnhap = new chitietnhap();
+        $chitietnhap->s_maFK = $request->s_maFK;
+        $chitietnhap->pn_maFK = $request->pn_maFK;
+        $chitietnhap->ctn_soLuong = $request->ctn_soLuong;
+        $chitietnhap->ctn_donGia = $request->ctn_donGia;
+        $chude->save();
+        return response(['error' => false, 'message' => $chitietnhap->toJson()], 200);
     }
 
     /**
@@ -45,7 +54,13 @@ class chitietnhapController extends Controller
      */
     public function show($id)
     {
-        //
+        $chitietnhap= chitietnhap::where("s_maFK", $id)->first();
+        return response([
+                'error' => $chitietnhap == null,
+                'message' => ($chitietnhap == null?
+                            "Không tìm thấy chitietnhap[{$id}]":
+                            $chitietnhap->toJson())
+            ], 200);
     }
 
     /**
@@ -56,7 +71,14 @@ class chitietnhapController extends Controller
      */
     public function edit($id)
     {
-        //
+        $chitietnhap = chitietnhap::where("s_maFK", $id)->first();
+        $result = [
+            'error' => $chitietnhap == null,
+            'message' => ($chitietnhap == null?
+                "Không tìm thấy chitietnhap[{$id}]":
+                $chitietnhap->toJson())
+        ];
+        return View('cusc_qt.chitietnhap.edit', ['result' => $result]);
     }
 
     /**
@@ -68,7 +90,24 @@ class chitietnhapController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $chitietnhap = chitietnhap::where("s_maFK", $id)
+                            ->first();
+        if ($chitietnhap) {
+            $chitietnhap->s_maFK = $request->s_maFK;
+            $chitietnhap->pn_maFK = $request->pn_maFK;
+            $chitietnhap->ctn_soLuong = $request->ctn_soLuong;
+            $chitietnhap->ctn_donGia = $request->ctn_donGia;
+            $chitietnhap->save();
+            return response([
+                    'error' => false,
+                    'message' => $chitietnhap->toJson()
+                ], 200);
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy Chitietnhap[{$id}]"
+                ], 200);
+        }
     }
 
     /**
@@ -79,6 +118,18 @@ class chitietnhapController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $chitietnhap = chitietnhap::where("s_maFK", $id)->first();
+        if($chitietnhap) {
+            $chitietnhap->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xóa chitietnhap[{$id}] thành công"], 200);
+
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy chitietnhap[{$id}]"
+                ], 200);
+        }
     }
 }
