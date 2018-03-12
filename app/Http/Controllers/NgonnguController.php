@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use app\ngonngu;
 use Illuminate\Http\Request;
 
 class ngonnguController extends Controller
@@ -37,11 +37,11 @@ class ngonnguController extends Controller
     public function store(Request $request)
     {
         $ngonngu = new ngonngu();
-        $ngonngu->nn_ma = $response->nn_ma;
-        $ngonngu->nn_ten = $response->nn_ten;
+        $ngonngu->nn_ma = $request->nn_ma;
+        $ngonngu->nn_ten = $request->nn_ten;
         $ngonngu->save();
 
-        return response(['error' => false, 'message' => $ngonngu->toJon()], 200);
+        return response(['error' => false, 'message' => $ngonngu->toJson()], 200);
     }
 
     /**
@@ -57,7 +57,7 @@ class ngonnguController extends Controller
             'error' => $ngonngu == null,
             'message' => ($ngonngu == null?
                             "Khong tim thay ngon ngu [{$id}]":
-                            $ngonngu -> toJon())
+                            $ngonngu -> toJson())
         ], 200);
     }
 
@@ -74,7 +74,7 @@ class ngonnguController extends Controller
             'error' => $ngonngu == null,
             'message' => ($ngonngu == null?
                             "Khong tim thay ngon ngu [{$id}]":
-                            $ngonngu-> toJon())
+                            $ngonngu-> toJson())
         ];
 
         return View('cusc_qt.ngonngu.edit', ['result' => $result]);
@@ -91,12 +91,12 @@ class ngonnguController extends Controller
     {
         $ngonngu = ngonngu::where("nn_ma", $id)->first();
         if ($ngonngu){
-            $ngonngu->nn_ma = $response->nn_ma;
-            $ngonngu->nn_ten = $response->nn_ten;
+            $ngonngu->nn_ma = $request->nn_ma;
+            $ngonngu->nn_ten = $request->nn_ten;
             $ngonngu->save();
             return response([
                     'error' => true.
-                    'message'=> $ngonngu->toJon()
+                    'message'=> $ngonngu->toJson()
             ], 200);
         } else{
             return response([
