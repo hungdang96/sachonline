@@ -8,6 +8,7 @@ use function compact;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use function json_encode;
+use function response;
 
 class tacgiaController extends Controller
 {
@@ -98,7 +99,8 @@ class tacgiaController extends Controller
             return response(['error'=>false,
                             'message'=>$tacgia->toJson()],200);
         }else{
-
+            return response(['error'=>true,
+                            'message'=>"Không tìm thấy tác giả tacgia[{$id}]"],200);
         }
     }
 
@@ -110,6 +112,14 @@ class tacgiaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tacgia = tacgia::where('tg_ma',$id)->first();
+        if($tacgia){
+            $tacgia->delete();
+            return response(['error'=>false,
+                            'message'=>"Đã xóa tác giả tacgia[{$id}]"],200);
+        }else{
+            return response(['error'=>true,
+                            'message'=>"Không thể tìm thấy tác giả tacgia[{$id}]"],200);
+        }
     }
 }

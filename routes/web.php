@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/khachhang', 'khachhangController@index');
+Route::get('/khachhang', 'khachhangController@store');
 
