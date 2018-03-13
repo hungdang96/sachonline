@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\chitietnhap;
 use Illuminate\Http\Request;
 
 class chitietnhapController extends Controller

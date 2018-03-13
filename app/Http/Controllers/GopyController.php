@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\gopy;
 use Illuminate\Http\Request;
 
 class gopyController extends Controller

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\dichgia;
 use Illuminate\Http\Request;
 
 class dichgiaController extends Controller
