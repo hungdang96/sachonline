@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\chudekhuyenmai;
 use Illuminate\Http\Request;
 
 class chudekhuyenmaiController extends Controller

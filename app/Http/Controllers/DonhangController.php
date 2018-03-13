@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\donhang;
 use Illuminate\Http\Request;
 
 class donhangController extends Controller

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\chude;
 use Illuminate\Http\Request;
 
 class chudeController extends Controller
