@@ -13,7 +13,10 @@ class dichgiaController extends Controller
      */
     public function index()
     {
-        //
+        $ds_dichgia = dichgia::all();
+        $json = json_encode($ds_dichgia);
+        return response([
+                'error' => false, 'message' => compact('ds_dichgia', 'json')],200);
     }
 
     /**
@@ -23,7 +26,7 @@ class dichgiaController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.dichgia.create');
     }
 
     /**
@@ -34,7 +37,10 @@ class dichgiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dichgia = new dichgia();
+        $dichgia->dg_ten = $request->dg_ten;
+        $dichgia->save();
+        return response(['error' => false, 'message' => $dichgia->toJson()], 200);
     }
 
     /**
@@ -45,7 +51,13 @@ class dichgiaController extends Controller
      */
     public function show($id)
     {
-        //
+        $dichgia= dichgia::where("dg_ma", $id)->first();
+        return response([
+                'error' => $dichgia == null,
+                'message' => ($dichgia == null?
+                            "Không tìm thấy dichgia[{$id}]":
+                            $dichgia->toJson())
+            ], 200);
     }
 
     /**
@@ -56,7 +68,14 @@ class dichgiaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dichgia = dichgia::where("dg_ma", $id)->first();
+        $result = [
+            'error' => $dichgia == null,
+            'message' => ($dichgia == null?
+                "Không tìm thấy dichgia[{$id}]":
+                $dichgia->toJson())
+        ];
+        return View('cusc_qt.dichgia.edit', ['result' => $result]);
     }
 
     /**
@@ -68,7 +87,21 @@ class dichgiaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dichgia = dichgia::where("dg_ma", $id)
+                            ->first();
+        if ($dichgia) {
+            $dichgia->dg_ten = $request->dg_ten;
+            $dichgia->save();
+            return response([
+                    'error' => false,
+                    'message' => $dichgia->toJson()
+                ], 200);
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy dichgia[{$id}]"
+                ], 200);
+        }
     }
 
     /**
@@ -79,6 +112,18 @@ class dichgiaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dichgia = dichgia::where("dg_ma", $id)->first();
+        if($dichgia) {
+            $dichgia->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xóa dichgia[{$id}] thành công"], 200);
+
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy dichgia[{$id}]"
+                ], 200);
+        }
     }
 }

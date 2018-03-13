@@ -13,7 +13,10 @@ class donhangController extends Controller
      */
     public function index()
     {
-        //
+        $ds_donhang = donhang::all();
+        $json = json_encode($ds_donhang);
+        return response([
+                'error' => false, 'message' => compact('ds_donhang', 'json')],200);
     }
 
     /**
@@ -23,7 +26,7 @@ class donhangController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.donhang.create');
     }
 
     /**
@@ -34,7 +37,19 @@ class donhangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $donhang = new donhang();
+        $donhang->dh_thoiGianDatHang = $request->dh_thoiGianDatHang;
+        $donhang->dh_thoiGianNhanHang = $request->dh_thoiGianNhanHang;
+        $donhang->dh_nguoiNhan = $request->dh_nguoiNhan;
+        $donhang->dh_diaChi = $request->dh_diaChi;
+        $donhang->dh_dienThoai = $request->dh_dienThoai;
+        $donhang->dh_nguoiGui = $request->dh_nguoiGui;
+        $donhang->dh_daThanhToan = $request->dh_daThanhToan;
+        $donhang->dh_ngayXuLy = $request->dh_ngayXuLy;
+        $donhang->dh_ngayLapPhieuGiao = $request->dh_ngayLapPhieuGiao;
+        $donhang->dh_ngayGiaoHang = $request->dh_ngayGiaoHang;
+        $donhang->save();
+        return response(['error' => false, 'message' => $donhang->toJson()], 200);
     }
 
     /**
@@ -45,7 +60,13 @@ class donhangController extends Controller
      */
     public function show($id)
     {
-        //
+        $donhang= donhang::where("dh_ma", $id)->first();
+        return response([
+                'error' => $donhang == null,
+                'message' => ($donhang == null?
+                            "Không tìm thấy donhang[{$id}]":
+                            $donhang->toJson())
+            ], 200);
     }
 
     /**
@@ -56,7 +77,14 @@ class donhangController extends Controller
      */
     public function edit($id)
     {
-        //
+        $donhang = donhang::where("dh_ma", $id)->first();
+        $result = [
+            'error' => $donhang == null,
+            'message' => ($donhang == null?
+                "Không tìm thấy donhang[{$id}]":
+                $donhang->toJson())
+        ];
+        return View('cusc_qt.donhang.edit', ['result' => $result]);
     }
 
     /**
@@ -68,7 +96,30 @@ class donhangController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $donhang = donhang::where("dh_ma", $id)
+                            ->first();
+        if ($donhang) {
+            $donhang->dh_thoiGianDatHang = $request->dh_thoiGianDatHang;
+            $donhang->dh_thoiGianNhanHang = $request->dh_thoiGianNhanHang;
+            $donhang->dh_nguoiNhan = $request->dh_nguoiNhan;
+            $donhang->dh_diaChi = $request->dh_diaChi;
+            $donhang->dh_dienThoai = $request->dh_dienThoai;
+            $donhang->dh_nguoiGui = $request->dh_nguoiGui;
+            $donhang->dh_daThanhToan = $request->dh_daThanhToan;
+            $donhang->dh_ngayXuLy = $request->dh_ngayXuLy;
+            $donhang->dh_ngayLapPhieuGiao = $request->dh_ngayLapPhieuGiao;
+            $donhang->dh_ngayGiaoHang = $request->dh_ngayGiaoHang;
+            $donhang->save();
+            return response([
+                    'error' => false,
+                    'message' => $donhang->toJson()
+                ], 200);
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy donhang[{$id}]"
+                ], 200);
+        }
     }
 
     /**
@@ -79,6 +130,18 @@ class donhangController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $donhang = donhang::where("dh_ma", $id)->first();
+        if($donhang) {
+            $donhang->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xóa donhang[{$id}] thành công"], 200);
+
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy donhang[{$id}]"
+                ], 200);
+        }
     }
 }
