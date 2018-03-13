@@ -38,6 +38,7 @@ class donhangController extends Controller
     public function store(Request $request)
     {
         $donhang = new donhang();
+        $donhang->dh_ma = $request->dh_ma;
         $donhang->dh_thoiGianDatHang = $request->dh_thoiGianDatHang;
         $donhang->dh_thoiGianNhanHang = $request->dh_thoiGianNhanHang;
         $donhang->dh_nguoiNhan = $request->dh_nguoiNhan;
@@ -48,6 +49,9 @@ class donhangController extends Controller
         $donhang->dh_ngayXuLy = $request->dh_ngayXuLy;
         $donhang->dh_ngayLapPhieuGiao = $request->dh_ngayLapPhieuGiao;
         $donhang->dh_ngayGiaoHang = $request->dh_ngayGiaoHang;
+        $donhang->dh_trangThai = $request->dh_trangThai;
+        $donhang->vc_maFK = $request->vc_maFK;
+        $donhang->tt_maFK = $request->tt_maFK;
         $donhang->save();
         return response(['error' => false, 'message' => $donhang->toJson()], 200);
     }
@@ -99,6 +103,7 @@ class donhangController extends Controller
         $donhang = donhang::where("dh_ma", $id)
                             ->first();
         if ($donhang) {
+            $donhang->dh_ma = $request->dh_ma;
             $donhang->dh_thoiGianDatHang = $request->dh_thoiGianDatHang;
             $donhang->dh_thoiGianNhanHang = $request->dh_thoiGianNhanHang;
             $donhang->dh_nguoiNhan = $request->dh_nguoiNhan;
@@ -109,6 +114,9 @@ class donhangController extends Controller
             $donhang->dh_ngayXuLy = $request->dh_ngayXuLy;
             $donhang->dh_ngayLapPhieuGiao = $request->dh_ngayLapPhieuGiao;
             $donhang->dh_ngayGiaoHang = $request->dh_ngayGiaoHang;
+            $donhang->dh_trangThai = $request->dh_trangThai;
+            $donhang->vc_maFK = $request->vc_maFK;
+            $donhang->tt_maFK = $request->tt_maFK;
             $donhang->save();
             return response([
                     'error' => false,

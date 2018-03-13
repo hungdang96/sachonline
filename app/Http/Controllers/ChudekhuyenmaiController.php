@@ -38,7 +38,10 @@ class chudekhuyenmaiController extends Controller
     public function store(Request $request)
     {
         $chudekhuyenmai = new chudekhuyenmai();
+        $chudekhuyenmai->km_maFK = $request->km_maFK;
+        $chudekhuyenmai->cd_maFK = $request->cd_maFK;
         $chudekhuyenmai->cdkm_giaTri = $request->cdkm_giaTri;
+        $chudekhuyenmai->cdkm_trangThai = $request->cdkm_trangThai;
         $chudekhuyenmai->save();
         return response(['error' => false, 'message' => $chudekhuyenmai->toJson()], 200);
     }
@@ -90,6 +93,8 @@ class chudekhuyenmaiController extends Controller
         $chudekhuyenmai = chudekhuyenmai::where("km_maFK", $id)
                             ->first();
         if ($chudekhuyenmai) {
+            $chudekhuyenmai->km_maFK = $request->km_maFK;
+            $chudekhuyenmai->cd_maFK = $request->cd_maFK;
             $chudekhuyenmai->cdkm_giaTri = $request->cdkm_giaTri;
             $chudekhuyenmai->cdkm_trangThai = $request->cdkm_trangThai;
             $chudekhuyenmai->save();

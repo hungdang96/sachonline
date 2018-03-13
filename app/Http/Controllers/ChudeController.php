@@ -38,7 +38,10 @@ class chudeController extends Controller
     public function store(Request $request)
     {
         $chude = new chude();
+        $chude->s_maFK = $request->s_maFK;
+        $chude->cd_maFK = $request->cd_maFK;
         $chude->cd_ten = $request->cd_ten;
+        $chude->cd_trangThai = $request->cd_trangThai;
         $chude->save();
         return response(['error' => false, 'message' => $chude->toJson()], 200);
     }
@@ -90,6 +93,8 @@ class chudeController extends Controller
         $chude = chude::where("cd_ma", $id)
                             ->first();
         if ($chude) {
+            $chude->s_maFK = $request->s_maFK;
+            $chude->cd_maFK = $request->cd_maFK;
             $chude->cd_ten = $request->cd_ten;
             $chude->cd_trangThai = $request->cd_trangThai;
             $chude->save();

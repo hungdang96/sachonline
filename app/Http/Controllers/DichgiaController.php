@@ -38,6 +38,8 @@ class dichgiaController extends Controller
     public function store(Request $request)
     {
         $dichgia = new dichgia();
+        $dichgia->s_maFK = $request->s_maFK;
+        $dichgia->dg_ma = $request->dg_ma;
         $dichgia->dg_ten = $request->dg_ten;
         $dichgia->save();
         return response(['error' => false, 'message' => $dichgia->toJson()], 200);
@@ -90,6 +92,8 @@ class dichgiaController extends Controller
         $dichgia = dichgia::where("dg_ma", $id)
                             ->first();
         if ($dichgia) {
+            $dichgia->s_maFK = $request->s_maFK;
+            $dichgia->dg_ma = $request->dg_ma;
             $dichgia->dg_ten = $request->dg_ten;
             $dichgia->save();
             return response([

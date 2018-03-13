@@ -38,6 +38,8 @@ class gopyController extends Controller
     public function store(Request $request)
     {
         $gopy = new gopy();
+        $gopy->s_maFK = $request->s_maFK;
+        $gopy->gy_ma = $request->gy_ma;
         $gopy->gy_thoiGian = $request->gy_thoiGian;
         $gopy->gy_noiDung = $request->gy_noiDung;
         $gopy->save();
@@ -91,6 +93,8 @@ class gopyController extends Controller
         $gopy = gopy::where("gy_ma", $id)
                             ->first();
         if ($gopy) {
+            $gopy->s_maFK = $request->s_maFK;
+            $gopy->gy_ma = $request->gy_ma;
             $gopy->gy_thoiGian = $request->gy_thoiGian;
             $gopy->gy_noiDung = $request->gy_noiDung;
             $gopy->save();
