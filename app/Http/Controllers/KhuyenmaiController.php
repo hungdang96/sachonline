@@ -115,12 +115,12 @@ class khuyenmaiController extends Controller
             $khuyenmai->km_ngayDuyet = $request->km_ngayDuyet;
             $khuyenmai->save();
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> $khuyenmai->toJson()
             ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay khuyen mai [{$id}]"
             ], 200);
         }
@@ -143,7 +143,7 @@ class khuyenmaiController extends Controller
                 ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay khuyen mai [{$id}]"
             ], 200);
         }

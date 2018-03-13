@@ -95,12 +95,12 @@ class ngonnguController extends Controller
             $ngonngu->nn_ten = $request->nn_ten;
             $ngonngu->save();
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> $ngonngu->toJson()
             ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay ngon ngu [{$id}]"
             ], 200);
         }
@@ -123,7 +123,7 @@ class ngonnguController extends Controller
                 ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay ngon ngu [{$id}]"
             ], 200);
         }
