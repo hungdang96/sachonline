@@ -19,7 +19,7 @@ class sachController extends Controller
     {
         $ds_sach = sach::all();
         $json = json_encode($ds_sach);
-        return response(['error'=>false,'message'=>compact($ds_sach,$json)],200);
+        return response(['error'=>false,'message'=>compact('ds_sach','json')],200);
     }
 
     /**

@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\tacgia;
+use App\theloai;
+use function compact;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+use function json_encode;
 
 class tacgiaController extends Controller
 {
@@ -13,7 +18,10 @@ class tacgiaController extends Controller
      */
     public function index()
     {
-        //
+        $ds_tacgia = tacgia::all();
+        $json = json_encode($ds_tacgia);
+        return response(['error'=>false,
+                        'message'=>compact('ds_tacgia','json')],200);
     }
 
     /**
@@ -23,7 +31,7 @@ class tacgiaController extends Controller
      */
     public function create()
     {
-        //
+        return View('welcome');
     }
 
     /**
@@ -34,7 +42,15 @@ class tacgiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tacgia = new tacgia();
+        $tacgia->tg_ma = $request->tg_ma;
+        $tacgia->tg_ten = $request->tg_ten;
+        $tacgia->tg_quocTich = $request->tg_quocTich;
+        $tacgia->s_maFK = $request->s_ma;
+        $tacgia->save();
+
+        return response(['error'=>false,
+                        'message'=>$tacgia->toJson()],200);
     }
 
     /**
@@ -56,7 +72,10 @@ class tacgiaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tacgia = tacgia::where('tg_ma',$id)->first();
+        $result = ['error'=>$tacgia==null,
+                'message'=>($tacgia==null?"Không tìm thấy tác giả tacgia[{$id}]":$tacgia->toJson())];
+        return View('welcome',['result'=>$result]);
     }
 
     /**
@@ -68,7 +87,19 @@ class tacgiaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tacgia = tacgia::where('tg_ma',$id)->first();
+        if($tacgia){
+            $tacgia->tg_ma = $request->tg_ma;
+            $tacgia->tg_ten = $request->tg_ten;
+            $tacgia->tg_quocTich = $request->tg_quocTich;
+            $tacgia->s_maFK = $request->s_ma;
+            $tacgia->save();
+
+            return response(['error'=>false,
+                            'message'=>$tacgia->toJson()],200);
+        }else{
+
+        }
     }
 
     /**
