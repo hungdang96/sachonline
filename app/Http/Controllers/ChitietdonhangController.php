@@ -41,7 +41,7 @@ class chitietdonhangController extends Controller
         $chitietdonhang->ctdh_soLuong = $request->ctdh_soLuong;
         $chitietdonhang->ctdh_donGia = $request->ctdh_donGia;
         $chitietdonhang->s_ma = $request->s_ma;
-        $chude->save();
+        $chitietdonhang->save();
         return response(['error' => false, 'message' => $chitietdonhang->toJson()], 200);
 
     }

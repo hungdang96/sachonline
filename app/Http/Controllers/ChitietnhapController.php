@@ -42,7 +42,7 @@ class chitietnhapController extends Controller
         $chitietnhap->pn_maFK = $request->pn_maFK;
         $chitietnhap->ctn_soLuong = $request->ctn_soLuong;
         $chitietnhap->ctn_donGia = $request->ctn_donGia;
-        $chude->save();
+        $chitietnhap->save();
         return response(['error' => false, 'message' => $chitietnhap->toJson()], 200);
     }
 
