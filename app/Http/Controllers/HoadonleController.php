@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\hoadonle;
 use Illuminate\Http\Request;
 
 class hoadonleController extends Controller
@@ -44,7 +44,7 @@ class hoadonleController extends Controller
         $hoadonle->nv_lapHoaDon = $request->nv_lapHoaDon;
         $hoadonle->save();
 
-        return response(['error' => false, 'message' => $hoadonle->toJon()], 200);
+        return response(['error' => false, 'message' => $hoadonle->toJson()], 200);
     }
 
     /**
@@ -60,7 +60,7 @@ class hoadonleController extends Controller
             'error' => $hoadonle == null,
             'message' => ($hoadonle == null?
                             "Khong tim thay hoa don le [{$id}]":
-                            $hoadonle -> toJon())
+                            $hoadonle -> toJson())
         ], 200);
     }
 
@@ -77,7 +77,7 @@ class hoadonleController extends Controller
             'error' => $hoadonle == null,
             'message' => ($hoadonle == null?
                             "Khong tim thay hoa don le [{$id}]":
-                            $hoadonle-> toJon())
+                            $hoadonle-> toJson())
         ];
 
         return View('cusc_qt.hoadonle.edit', ['result' => $result]);
@@ -103,12 +103,12 @@ class hoadonleController extends Controller
             $hoadonle->save();
 
             return response([
-                    'error' => true.
-                    'message'=> $hoadonle->toJon()
+                    'error' => true,
+                    'message'=> $hoadonle->toJson()
             ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay hoa don le [{$id}]"
             ], 200);
         }
@@ -131,7 +131,7 @@ class hoadonleController extends Controller
                 ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay hoa don le [{$id}]"
             ], 200);
         }

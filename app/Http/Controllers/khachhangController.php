@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\khachhang;
 use Illuminate\Http\Request;
 
 class khachhangController extends Controller
@@ -13,7 +14,7 @@ class khachhangController extends Controller
      */
     public function index()
     {
-        $ds_khachhang = khachhang::all();
+        $ds_khachhang=khachhang::all();
         $json = json_encode($ds_khachhang);
         return response(['error' => false, 'message' => compact('ds_khachhang', 'json')], 200);
     }
@@ -37,18 +38,19 @@ class khachhangController extends Controller
     public function store(Request $request)
     {
         $khachhang = new khachhang();
-        $khachhang->kh_ma = $response->kh_ma;
-        $khachhang->kh_taiKhoan = $response->kh_taiKhoan;
-        $khachhang->kh_matKhau = $response->kh_matKhau;
-        $khachhang->kh_hoTen = $response->kh_hoTen;
-        $khachhang->kh_gioiTinh = $response->kh_gioiTinh;
-        $khachhang->kh_email = $response->kh_email;
-        $khachhang->kh_diaChi = $response->kh_diaChi;
-        $khachhang->kh_soDienThoai = $response->kh_soDienThoai;
+        $khachhang->kh_ma = $request->kh_ma;
+        $khachhang->kh_taiKhoan = $request->kh_taiKhoan;
+        $khachhang->kh_matKhau = $request->kh_matKhau;
+        $khachhang->kh_hoTen = $request->kh_hoTen;
+        $khachhang->kh_gioiTinh = $request->kh_gioiTinh;
+        $khachhang->kh_email = $request->kh_email;
+        $khachhang->kh_diaChi = $request->kh_diaChi;
+        $khachhang->kh_soDienThoai = $request->kh_soDienThoai;
         $khachhang->save();
 
-        return response(['error' => false, 'message' => $khachhang->toJon()], 200);
-    }
+        return response(['error' => false, 'message' => $khachhang->toJson()], 200);
+//        return ['status'=>true, 'data'=>$khachhang];
+}
 
     /**
      * Display the specified resource.
@@ -63,7 +65,7 @@ class khachhangController extends Controller
             'error' => $khachhang == null,
             'message' => ($khachhang == null?
                             "Khong tim thay khach hang [{$id}]":
-                            $khachhang -> toJon())
+                            $khachhang -> toJson())
         ], 200);
     }
 
@@ -80,7 +82,7 @@ class khachhangController extends Controller
             'error' => $khachhang == null,
             'message' => ($khachhang == null?
                             "Khong tim thay khach hang [{$id}]":
-                            $khachhang-> toJon())
+                            $khachhang-> toJson())
         ];
 
         return View('cusc_qt.khachhang.edit', ['result' => $result]);
@@ -97,22 +99,22 @@ class khachhangController extends Controller
     {
         $khachhang = khachhang::where("kh_ma", $id)->first();
         if ($khachhang){
-            $khachhang-> kh_ma = $response->kh_ma;
-            $khachhang->kh_taiKhoan = $response->kh_taiKhoan;
-            $khachhang->kh_matKhau = $response->kh_matKhau;
-            $khachhang->kh_hoTen = $response->kh_hoTen;
-            $khachhang->kh_gioiTinh = $response->kh_gioiTinh;
-            $khachhang->kh_email = $response->kh_email;
-            $khachhang->kh_diaChi = $response->kh_diaChi;
-            $khachhang->kh_soDienThoai = $response->kh_soDienThoai;
+            $khachhang-> kh_ma = $request->kh_ma;
+            $khachhang->kh_taiKhoan = $request->kh_taiKhoan;
+            $khachhang->kh_matKhau = $request->kh_matKhau;
+            $khachhang->kh_hoTen = $request->kh_hoTen;
+            $khachhang->kh_gioiTinh = $request->kh_gioiTinh;
+            $khachhang->kh_email = $request->kh_email;
+            $khachhang->kh_diaChi = $request->kh_diaChi;
+            $khachhang->kh_soDienThoai = $request->kh_soDienThoai;
             $khachhang->save();
             return response([
-                    'error' => true.
-                    'message'=> $khachhang->toJon()
+                    'error' => true,
+                    'message'=> $khachhang->toJson()
             ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay khach hang [{$id}]"
             ], 200);
         }
@@ -136,7 +138,7 @@ class khachhangController extends Controller
                 ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay khach hang [{$id}]"
             ], 200);
         }

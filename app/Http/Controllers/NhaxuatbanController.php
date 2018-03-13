@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use app\nhaxuatban;
 use Illuminate\Http\Request;
 
 class nhaxuatbanController extends Controller
@@ -13,7 +13,9 @@ class nhaxuatbanController extends Controller
      */
     public function index()
     {
-        //
+        $ds_nhaxuatban = nhaxuatban::all();
+        $json = json_encode($ds_nhaxuatban);
+        return response(['error' => false, 'message' => compact('ds_nhaxuatban', 'json')], 200);
     }
 
     /**
@@ -23,7 +25,7 @@ class nhaxuatbanController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.nhaxuatban.create');
     }
 
     /**
@@ -34,7 +36,12 @@ class nhaxuatbanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nhaxuatban = new nhaxuatban();
+        $nhaxuatban->nxb_ma = $request->nxb_ma;
+        $nhaxuatban->nxb_ten = $request->nxb_ten;
+        $nhaxuatban->save();
+
+        return response(['error' => false, 'message' => $nhaxuatban->toJson()], 200);
     }
 
     /**
@@ -45,7 +52,13 @@ class nhaxuatbanController extends Controller
      */
     public function show($id)
     {
-        //
+        $nhaxuatban = nhaxuatban::where("nxb_ma", $id)->first();
+        return response([
+            'error' => $nhaxuatban == null,
+            'message' => ($nhaxuatban == null?
+                            "Khong tim thay chu cho [{$id}]":
+                            $nhaxuatban -> toJson())
+        ], 200);
     }
 
     /**
@@ -56,7 +69,15 @@ class nhaxuatbanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $nhaxuatban = nhaxuatban::where("nxb_ma", $id)->first();
+        $result = [
+            'error' => $nhaxuatban == null,
+            'message' => ($nhaxuatban == null?
+                            "Khong tim thay nha xuat ban [{$id}]":
+                            $nhaxuatban-> toJson())
+        ];
+
+        return View('cusc_qt.nhaxuatban.edit', ['result' => $result]);
     }
 
     /**
@@ -68,7 +89,21 @@ class nhaxuatbanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $nhaxuatban = nhaxuatban::where("nxb_ma", $id)->first();
+        if ($nhaxuatban){
+            $nhaxuatban->nxb_ma = $request->nxb_ma;
+            $nhaxuatban->nxb_ten = $request->nxb_ten;
+            $nhaxuatban->save();
+            return response([
+                    'error' => true,
+                    'message'=> $nhaxuatban->toJson()
+            ], 200);
+        } else{
+            return response([
+                    'error' => true,
+                    'message'=> "Khong tim thay nha xuat ban [{$id}]"
+            ], 200);
+        }
     }
 
     /**
@@ -79,6 +114,18 @@ class nhaxuatbanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $nhaxuatban = nhaxuatban::where("nxb_ma", $id)->first();
+        if ($nhaxuatban){
+            $nhaxuatban->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xoa nha xuat ban [{$id}] thanh cong"
+                ], 200);
+        } else{
+            return response([
+                    'error' => true,
+                    'message'=> "Khong tim thay nha xuat ban [{$id}]"
+            ], 200);
+        }
     }
 }

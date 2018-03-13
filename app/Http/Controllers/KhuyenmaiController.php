@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use app\khuyenmai;
 use Illuminate\Http\Request;
 
 class khuyenmaiController extends Controller
@@ -50,7 +50,7 @@ class khuyenmaiController extends Controller
         $khuyenmai->nv_kyDuyet = $request->nv_kyDuyet;
         $khuyenmai->km_ngayDuyet = $request->km_ngayDuyet;
         $khuyenmai->save();
-        return response(['error' => false, 'message' => $khuyenmai->toJon()], 200);
+        return response(['error' => false, 'message' => $khuyenmai->toJson()], 200);
     }
 
 
@@ -67,7 +67,7 @@ class khuyenmaiController extends Controller
             'error' => $khuyenmai == null,
             'message' => ($khuyenmai == null?
                             "Khong tim thay khuyen mai [{$id}]":
-                            $khuyenmai -> toJon())
+                            $khuyenmai -> toJson())
         ], 200);
     }
 
@@ -84,7 +84,7 @@ class khuyenmaiController extends Controller
             'error' => $khuyenmai == null,
             'message' => ($khuyenmai == null?
                             "Khong tim thay khuyen mai [{$id}]":
-                            $khuyenmai-> toJon())
+                            $khuyenmai-> toJson())
         ];
 
         return View('cusc_qt.khuyenmai.edit', ['result' => $result]);
@@ -115,12 +115,12 @@ class khuyenmaiController extends Controller
             $khuyenmai->km_ngayDuyet = $request->km_ngayDuyet;
             $khuyenmai->save();
             return response([
-                    'error' => true.
-                    'message'=> $khuyenmai->toJon()
+                    'error' => true,
+                    'message'=> $khuyenmai->toJson()
             ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay khuyen mai [{$id}]"
             ], 200);
         }
@@ -143,10 +143,9 @@ class khuyenmaiController extends Controller
                 ], 200);
         } else{
             return response([
-                    'error' => true.
+                    'error' => true,
                     'message'=> "Khong tim thay khuyen mai [{$id}]"
             ], 200);
         }
-    }
     }
 }
