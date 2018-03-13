@@ -13,7 +13,10 @@ class chudeController extends Controller
      */
     public function index()
     {
-        //
+        $ds_chude = chude::all();
+        $json = json_encode($ds_chude);
+        return response([
+                'error' => false, 'message' => compact('ds_chude', 'json')],200);
     }
 
     /**
@@ -23,7 +26,7 @@ class chudeController extends Controller
      */
     public function create()
     {
-        //
+        return View('cusc_qt.chude.create');
     }
 
     /**
@@ -34,7 +37,10 @@ class chudeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $chude = new chude();
+        $chude->cd_ten = $request->cd_ten;
+        $chude->save();
+        return response(['error' => false, 'message' => $chude->toJson()], 200);
     }
 
     /**
@@ -45,7 +51,13 @@ class chudeController extends Controller
      */
     public function show($id)
     {
-        //
+        $chude= chude::where("cd_ma", $id)->first();
+        return response([
+                'error' => $chude == null,
+                'message' => ($chude == null?
+                            "Không tìm thấy chude[{$id}]":
+                            $chude->toJson())
+            ], 200);
     }
 
     /**
@@ -56,7 +68,14 @@ class chudeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $chude = chude::where("cd_ma", $id)->first();
+        $result = [
+            'error' => $chude == null,
+            'message' => ($chude == null?
+                "Không tìm thấy chude[{$id}]":
+                $chude->toJson())
+        ];
+        return View('cusc_qt.chude.edit', ['result' => $result]);
     }
 
     /**
@@ -68,7 +87,22 @@ class chudeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $chude = chude::where("cd_ma", $id)
+                            ->first();
+        if ($chude) {
+            $chude->cd_ten = $request->cd_ten;
+            $chude->cd_trangThai = $request->cd_trangThai;
+            $chude->save();
+            return response([
+                    'error' => false,
+                    'message' => $chude->toJson()
+                ], 200);
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy chude[{$id}]"
+                ], 200);
+        }
     }
 
     /**
@@ -79,6 +113,18 @@ class chudeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $chude = chude::where("cd_ma", $id)->first();
+        if($chude) {
+            $chude->delete();
+            return response([
+                    'error' => false,
+                    'message' => "Xóa chude[{$id}] thành công"], 200);
+
+        } else {
+            return response([
+                    'error' => true,
+                    'message' => "Không tìm thấy chude[{$id}]"
+                ], 200);
+        }
     }
 }
