@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class hoadonle extends Model
 {
     protected $timestamp = false;
-    protected $incrementing = false;
+    public $incrementing = false;
 
     protected $table = 'hoadonle';
     protected $fillable = ['hdl_ma','hdl_nguoiMuaHang','hdl_dienThoai','hdl_diaChi','nv_lapHoaDon','hdl_ngayXuatHoaDon','dh_maFK'];

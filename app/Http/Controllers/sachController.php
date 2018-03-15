@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\sach;
 use function compact;
+use function file_get_contents;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use function json_encode;
+use PDOException;
 use function response;
 
 class sachController extends Controller
@@ -140,14 +143,20 @@ class sachController extends Controller
         }
     }
 
+//    Kiem tra ton tai cua sku
     public function checkExist_name($value){
-        $id_book = sach::where('s_sku',$value)->first();
-        if($id_book){
-            return response(['error'=>true,
-                            'message'=>"Mã sku đã tồn tại sach[{$value}]"],200);
-        }else{
+        try{
+            $sach_check = sach::where('s_sku',$value)->first();
             return response(['error'=>false,
-                            'message'=>"Mã sku chưa có, bạn có thể thêm $value vào csdl!"],200);
+                            'message'=>$sach_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                            'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                            'message'=>$e->getMessage()],200);
         }
     }
 }

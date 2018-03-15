@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ngonngu extends Model
 {
     protected $timestamp = false;
-    protected $incrementing = false;
+    public $incrementing = false;
 
     protected $table = 'ngonngu';
     protected $fillable = ['nn_ma','nn_ten'];

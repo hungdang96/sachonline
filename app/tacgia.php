@@ -8,7 +8,7 @@ class tacgia extends Model
 {
     const CREATED_AT = 'tg_taoMoi';
     const UPDATED_AT = 'tg_capNhat';
-    protected $incrementing = false;
+    public $incrementing = false;
 
     protected $table = 'tacgia';
     protected $fillable = ['tg_ma','tg_ten','tg_quocTich','tg_taoMoi','q_capNhat','s_maFK'];

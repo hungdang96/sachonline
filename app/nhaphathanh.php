@@ -9,7 +9,7 @@ class nhaphathanh extends Model
     const CREATED_AT = 'nph_tao';
     const UPDATED_AT = 'nph_capNhat';
 
-    protected $incrementing = false;
+    public $incrementing = false;
 
     protected $table = 'nhaphathanh';
     protected $fillable = ['nph_ma','nph_ten', 'nph_daiDien', 'nph_diaChi', 'nph_soDienThoai', 'nph_email', 'nph_tao', 'nph_capNhat', 'nph_trangThai'];
