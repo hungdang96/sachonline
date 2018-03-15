@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class chudekhuyenmai extends Model
 {
-    protected $timestamp = false;
+    public $timestamps = false;
     public $incrementing = false;
 
 

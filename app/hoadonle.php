@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class hoadonle extends Model
 {
-    protected $timestamp = false;
+    public $timestamps = false;
     public $incrementing = false;
 
     protected $table = 'hoadonle';

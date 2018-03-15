@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class gopy extends Model
 {
-    protected $timestamp = false;
+    public $timestamps = false;
 
     protected $table = 'gopy';
     protected $fillable = ['gy_thoiGian','gy_noiDung','s_maFK','kh_maFK'];
