@@ -7,6 +7,7 @@ use function compact;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use function json_encode;
+use function response;
 
 class sachController extends Controller
 {
@@ -136,6 +137,17 @@ class sachController extends Controller
         }else{
             return response(['error'=>true,
                             'message'=>"Không tìm thấy sách sach[{$id}]"],200);
+        }
+    }
+
+    public function checkExist_name($value){
+        $id_book = sach::where('s_sku',$value)->first();
+        if($id_book){
+            return response(['error'=>true,
+                            'message'=>"Mã sku đã tồn tại sach[{$value}]"],200);
+        }else{
+            return response(['error'=>false,
+                            'message'=>"Mã sku chưa có, bạn có thể thêm $value vào csdl!"],200);
         }
     }
 }

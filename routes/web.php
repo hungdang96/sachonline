@@ -11,9 +11,19 @@
 |
 */
 
+use App\Http\Controllers\sachController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/khachhang', 'khachhangController@store');
+Route::get('/khachhang/ds', 'khachhangController@index');
 
+////Khach hang route
+//Route::group(['prefix'=>'management', function(){
+//
+//}]);
+
+//Sach route
+Route::get('/sach/kiemtra', 'sachController@checkExist_name');
+Route::post('/sach/add', 'sachController@store');
