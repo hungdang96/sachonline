@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/khachhang/ds', 'khachhangController@index');
+Route::get('/nxb/add/{nxb_ma}/{nxb_ten}/{nxb_diaChi}', 'NhaxuatbanController@store');
 
 ////Khach hang route
 //Route::group(['prefix'=>'management', function(){

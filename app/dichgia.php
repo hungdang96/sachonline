@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class dichgia extends Model
 {
-    protected $incrementing = false;
+    public $incrementing = false;
+
     const CREATED_AT = 'dg_taoMoi';
     const UPDATED_AT = 'dg_capNhat';
 

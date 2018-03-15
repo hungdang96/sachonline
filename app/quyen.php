@@ -8,7 +8,7 @@ class quyen extends Model
 {
     const CREATED_AT = 'q_taoMoi';
     const UPDATED_AT = 'q_capNhat';
-    protected $incrementing = false;
+    public $incrementing = false;
 
     protected $table = 'quyen';
     protected $fillable = ['q_ma','q_ten','q_dienGiai','q_taoMoi','q_capNhat','q_trangThai'];

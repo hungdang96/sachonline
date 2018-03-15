@@ -8,7 +8,7 @@ class donhang extends Model
 {
     const CREATED_AT = 'dh_taoMoi';
     const UPDATED_AT = 'dh_capNhat';
-    protected $incrementing = false;
+    public $incrementing = false;
 
     protected $table = 'donhang';
     protected $fillable = ['dh_ma','dh_thoiGianDatHang','dh_nguoiNhan','dh_diaChi','dh_dienThoai','dh_nguoiGui','dh_daThanhToan','nv_xuLy','dh_ngayXuLy','nv_giaoHang','dh_ngayLapPhieuGiao','dh_ngayGiaoHang','dh_taoMoi','dh_capNhat','dh_trangThai','vc_maFK','tt_maFK'];

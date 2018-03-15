@@ -8,7 +8,7 @@ class thanhtoan extends Model
 {
     const CREATED_AT = 'tt_tao';
     const UPDATED_AT = 'tt_capNhat';
-    protected $incrementing = false;
+    public $incrementing = false;
 
     protected $table = 'thanhtoan';
     protected $fillable = ['tt_ma','tt_ten','tt_dienGiai','tt_tao','tt_capNhat','tt_trangThai'];

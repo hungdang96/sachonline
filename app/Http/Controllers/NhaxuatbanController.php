@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use app\nhaxuatban;
+use App\nhaxuatban;
 use Illuminate\Http\Request;
 
 class nhaxuatbanController extends Controller
@@ -39,6 +39,7 @@ class nhaxuatbanController extends Controller
         $nhaxuatban = new nhaxuatban();
         $nhaxuatban->nxb_ma = $request->nxb_ma;
         $nhaxuatban->nxb_ten = $request->nxb_ten;
+        $nhaxuatban->nxb_diaChi = $request->nxb_diaChi;
         $nhaxuatban->save();
 
         return response(['error' => false, 'message' => $nhaxuatban->toJson()], 200);

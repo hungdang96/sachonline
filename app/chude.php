@@ -8,7 +8,8 @@ class chude extends Model
 {
     const CREATED_AT = 'cd_taoMoi';
     const UPDATED_AT = 'cd_capNhat';
-    protected $incrementing = false;
+    public $incrementing = false;
+
 
     protected $table = 'chude';
     protected $fillable = ['cd_ma','cd_ten','cd_dienGiai','cd_taoMoi','cd_capNhat','cd_trangThai','s_maFK'];
