@@ -144,5 +144,11 @@ class khachhangController extends Controller
         }
     }
 
+    public function returnView()
+    {
+        return View('hello')->with(['hoten'=>'Đặng Thanh Hùng',
+                                        'email'=> 'abc@test.com',
+                                        'phone'=> '0123456xxx']);
+    }
 
 }
