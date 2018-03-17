@@ -3,32 +3,55 @@
         <title>Hello!</title>
         <meta charset="utf-8">
         <!-- Fonts -->
-        {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">--}}
-        {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">--}}
-        {{--<link rel="stylesheet" href="{!! asset('css/app.css') !!}">--}}
-        {{--<link rel="stylesheet" href="{!! asset('css/font-awesome.min.css') !!}">--}}
-        {{--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>--}}
-        {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--}}
-        {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>--}}
-        {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>--}}
-        {{--<script src="{!! asset('js/app.js') !!}"></script>--}}
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
+        <link rel="stylesheet" href="{!! asset('css/font-awesome.min.css') !!}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="{!! asset('js/app.js') !!}"></script>
     </head>
     <body>
-        {{--<p>Hello {{$hoten}}!<br>--}}
-            {{--Your email: {{$email}} - Your phone: {{$phone}} !</p>--}}
-        <table border=1 cellpadding="5" style="text-align: center;">
+        <table border=1 cellpadding="5" style="font-size: 12px; text-align: center;">
             <tr>
-                <td>STT</td>
-                <td>Họ tên</td>
-                <td>Email</td>
-                <td>Số điện thoại</td>
+                <th colspan="12" style="font-size: 25px;">Danh sách khách hàng</th>
             </tr>
             <tr>
-                <td> </td>
-                <td>{{$hoten}}</td>
-                <td> {{$email}}</td>
-                <td> {{$phone}}</td>
+                <th>STT</th>
+                <th>ID</th>
+                <th>Tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>Họ tên</th>
+                <th>Giới tính</th>
+                <th>Email</th>
+                <th>Ngày sinh</th>
+                <th>Địa chỉ</th>
+                <th>Số điện thoại</th>
+                <th>Tạo mới</th>
+                <th>Cập nhật</th>
+                <th>Trạng Thái</th>
             </tr>
+            @foreach($kh as $index=>$k)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td>{{$k->kh_ma}}</td>
+                <td>{{$k->kh_taiKhoan}}</td>
+                <td>{{$k->kh_matKhau}}</td>
+                <td>{{$k->kh_hoTen}}</td>
+                <td>{{$k->kh_gioiTinh}}</td>
+                <td>{{$k->kh_email}}</td>
+                <td>{{$k->kh_ngaysinh}}</td>
+                <td>{{$k->kh_diaChi}}</td>
+                <td>{{$k->kh_soDienThoai}}</td>
+                <td>{{$k->kh_taoMoi}}</td>
+                <td>{{$k->kh_capNhat}}</td>
+                <td>{{$k->kh_trangThai}}</td>
+            </tr>
+            @endforeach
         </table>
+        <div class="d-flex">
+            <div class="mx-auto mt-3">
+                {{$kh->links("pagination::bootstrap-4")}}
+            </div>
+        </div>
     </body>
 </html>

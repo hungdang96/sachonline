@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\khachhang;
+use function compact;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class khachhangController extends Controller
 {
@@ -105,8 +107,10 @@ class khachhangController extends Controller
             $khachhang->kh_hoTen = $request->kh_hoTen;
             $khachhang->kh_gioiTinh = $request->kh_gioiTinh;
             $khachhang->kh_email = $request->kh_email;
+            $khachhang->kh_ngaySinh = $request->kh_ngaySinh;
             $khachhang->kh_diaChi = $request->kh_diaChi;
             $khachhang->kh_soDienThoai = $request->kh_soDienThoai;
+            $khachhang->kh_trangThai = $request->kh_trangThai;
             $khachhang->save();
             return response([
                     'error' => true,
@@ -149,6 +153,11 @@ class khachhangController extends Controller
         return View('hello')->with(['hoten'=>'Đặng Thanh Hùng',
                                         'email'=> 'abc@test.com',
                                         'phone'=> '0123456xxx']);
+    }
+
+    public function returnKH(){
+        $kh = khachhang::paginate(10);
+        return View('hello', compact('kh'));
     }
 
 }
