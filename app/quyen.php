@@ -10,7 +10,7 @@ class quyen extends Model
     const UPDATED_AT = 'q_capNhat';
     public $incrementing = false;
 
-    protected $table = 'quyen';
+    protected $table = 'quyenTableSeeder';
     protected $fillable = ['q_ma','q_ten','q_dienGiai','q_taoMoi','q_capNhat','q_trangThai'];
 
      protected $primaryKey = 'q_ma';

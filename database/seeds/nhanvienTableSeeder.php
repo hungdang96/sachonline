@@ -5,7 +5,7 @@ use Illuminate\PhpVnDataGenerator\VnBase;
 use Illuminate\PhpVnDataGenerator\VnFullname;
 use Illuminate\PhpVnDataGenerator\VnPersonalInfo;
 
-class nhanvien extends Seeder
+class nhanvienTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -86,7 +86,7 @@ class nhanvien extends Seeder
             $sdt = $uPI->Mobile("",VnBase::VnFalse);
             //sinh ngau nhien
             $address = $uPI->Address();
-            //Ma quyen
+            //Ma quyenTableSeeder
             if($i == 0){
                 $quyenMa = 1;
             }else{
@@ -108,6 +108,6 @@ class nhanvien extends Seeder
                 'q_maFK' => $quyenMa
             ]);
         }
-        DB::table('nhanvien')->insert($list);
+        DB::table('nhanvienTableSeeder')->insert($list);
     }
 }

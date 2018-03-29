@@ -23,13 +23,9 @@ class CreateChudeTable extends Migration
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedInteger('cd_trangThai')
                 ->default('1');
-            $table->string('s_maFK', 20);
 
             $table->unique(['cd_ten']);
             $table->primary(['cd_ma']);
-            $table->foreign('s_maFK')
-                ->references('s_sku')->on('sach')
-                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

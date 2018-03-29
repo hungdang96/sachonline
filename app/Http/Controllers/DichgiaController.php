@@ -130,4 +130,20 @@ class dichgiaController extends Controller
                 ], 200);
         }
     }
+
+    public function checkExistName($value){
+        try{
+            $dichgia_check = dichgia::where('dg_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$dichgia_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
 }

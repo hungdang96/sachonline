@@ -11,7 +11,7 @@ class nhanvien extends Model
 
     public $incrementing = false;
 
-    protected $table = 'nhanvien';
+    protected $table = 'nhanvienTableSeeder';
     protected $fillable = ['nv_ma','nv_taiKhoan','nv_matKhau','nv_hoTen','nv_gioiTinh','nv_email','nv_ngaySinh','nv_diaChi','nv_soDienThoai','nv_tao','nv_capNhat','nv_trangThai', 'q_maFK'];
     protected $primaryKey = 'nv_ma';
 

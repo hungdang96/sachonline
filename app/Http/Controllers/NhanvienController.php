@@ -25,7 +25,7 @@ class nhanvienController extends Controller
      */
     public function create()
     {
-        return View('cusc_qt.nhanvien.create');
+        return View('cusc_qt.nhanvienTableSeeder.create');
     }
 
     /**
@@ -84,7 +84,7 @@ class nhanvienController extends Controller
                             $nhanvien-> toJson())
         ];
 
-        return View('cusc_qt.nhanvien.edit', ['result' => $result]);
+        return View('cusc_qt.nhanvienTableSeeder.edit', ['result' => $result]);
     }
 
     /**

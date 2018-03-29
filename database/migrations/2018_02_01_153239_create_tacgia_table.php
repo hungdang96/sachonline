@@ -21,12 +21,9 @@ class CreateTacgiaTable extends Migration
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('tg_capNhat')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('s_maFK', 20);
 
             $table->unique('tg_ten');
             $table->primary('tg_ma');
-            $table->foreign('s_maFK')->references('s_sku')
-                ->on('sach')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

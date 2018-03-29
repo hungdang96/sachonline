@@ -11,10 +11,8 @@
         <script src="{!! asset('js/app.js') !!}"></script>
     </head>
     <body>
-        <table border=1 cellpadding="5" style="font-size: 12px; text-align: center;">
-            <tr>
-                <th colspan="12" style="font-size: 25px;">Danh sách khách hàng</th>
-            </tr>
+        <table class="table" style="font-size: 12px;">
+            <thead class="thead-inverse text-center">
             <tr>
                 <th>STT</th>
                 <th>ID</th>
@@ -26,10 +24,12 @@
                 <th>Ngày sinh</th>
                 <th>Địa chỉ</th>
                 <th>Số điện thoại</th>
-                <th>Tạo mới</th>
-                <th>Cập nhật</th>
+                {{--<th>Tạo mới</th>--}}
+                {{--<th>Cập nhật</th>--}}
                 <th>Trạng Thái</th>
             </tr>
+            </thead>
+            <tbody>
             @foreach($kh as $index=>$k)
             <tr>
                 <td>{{$index+1}}</td>
@@ -39,13 +39,14 @@
                 <td>{{$k->kh_hoTen}}</td>
                 <td>{{$k->kh_gioiTinh}}</td>
                 <td>{{$k->kh_email}}</td>
-                <td>{{$k->kh_ngaysinh}}</td>
+                <td>{{$k->kh_ngaySinh}}</td>
                 <td>{{$k->kh_diaChi}}</td>
                 <td>{{$k->kh_soDienThoai}}</td>
-                <td>{{$k->kh_taoMoi}}</td>
-                <td>{{$k->kh_capNhat}}</td>
+                {{--<td>{{$k->kh_taoMoi}}</td>--}}
+                {{--<td>{{$k->kh_capNhat}}</td>--}}
                 <td>{{$k->kh_trangThai}}</td>
             </tr>
+            </tbody>
             @endforeach
         </table>
         <div class="d-flex">

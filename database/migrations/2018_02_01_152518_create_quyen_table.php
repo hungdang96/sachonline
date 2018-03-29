@@ -13,7 +13,7 @@ class CreateQuyenTable extends Migration
      */
     public function up()
     {
-        Schema::create('quyen', function (Blueprint $table) {
+        Schema::create('quyenTableSeeder', function (Blueprint $table) {
             $table->string('q_ma', 10);
             $table->string('q_ten', 30);
             $table->string('q_dienGiai', 250);
@@ -33,6 +33,6 @@ class CreateQuyenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quyen');
+        Schema::dropIfExists('quyenTableSeeder');
     }
 }

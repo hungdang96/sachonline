@@ -71,7 +71,7 @@ class quyenController extends Controller
     {
         $quyen = quyen::where('q_ma',$id)->first();
         $result = ['error'=>$quyen==null,
-                    'message'=>($quyen==null?"Không tìm thấy mã quyền quyen[{$id}]":$quyen->toJson())];
+                    'message'=>($quyen==null?"Không tìm thấy mã quyền quyenTableSeeder[{$id}]":$quyen->toJson())];
         return View('welcome',['result'=>$result]);
     }
 
@@ -94,7 +94,7 @@ class quyenController extends Controller
 
             return response(['error'=>false,'message'=>$quyen->toJson()],200);
         }else{
-            return response(['error'=>true,'message'=>"Không tìm thấy mã quyền quyen[{$id}]"],200);
+            return response(['error'=>true,'message'=>"Không tìm thấy mã quyền quyenTableSeeder[{$id}]"],200);
         }
     }
 
@@ -111,7 +111,23 @@ class quyenController extends Controller
             $quyen->delete();
             return response(['error'=>false, 'message'=>"Đã xóa quyền [{$id}]"],200);
         }else{
-            return response(['error'=>true,'message'=>"Không tìm thấy mã quyền quyen[{$id}]"],200);
+            return response(['error'=>true,'message'=>"Không tìm thấy mã quyền quyenTableSeeder[{$id}]"],200);
+        }
+    }
+
+    public function checkExistName($value){
+        try{
+            $quyen_check = quyen::where('q_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$quyen_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
         }
     }
 }

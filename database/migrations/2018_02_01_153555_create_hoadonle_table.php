@@ -28,7 +28,7 @@ class CreateHoadonleTable extends Migration
                 ->references('dh_ma')->on('donhang')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('nv_lapHoaDon')
-                ->references('nv_ma')->on('nhanvien')
+                ->references('nv_ma')->on('nhanvienTableSeeder')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

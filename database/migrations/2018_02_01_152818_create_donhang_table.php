@@ -37,7 +37,7 @@ class CreateDonhangTable extends Migration
 
             $table->unique(['dh_dienThoai']);
             $table->primary('dh_ma');
-            $table->foreign('nv_giaoHang')->references('nv_ma')->on('nhanvien')
+            $table->foreign('nv_giaoHang')->references('nv_ma')->on('nhanvienTableSeeder')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('vc_maFK')->references('vc_ma')->on('vanchuyen')
                 ->onDelete('cascade')->onUpdate('cascade');

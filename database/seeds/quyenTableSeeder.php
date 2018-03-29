@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class quyen extends Seeder
+class quyenTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -35,6 +35,6 @@ class quyen extends Seeder
                 'q_trangThai' => $trangThai
             ]);
         }
-        DB::table('quyen')->insert($list);
+        DB::table('quyenTableSeeder')->insert($list);
     }
 }

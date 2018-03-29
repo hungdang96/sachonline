@@ -20,13 +20,9 @@ class CreateDichgiaTable extends Migration
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('dg_capNhat')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('s_maFK', 20);
 
             $table->unique(['dg_ten']);
             $table->primary(['dg_ma']);
-            $table->foreign('s_maFK')
-                ->references('s_sku')->on('sach')
-                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

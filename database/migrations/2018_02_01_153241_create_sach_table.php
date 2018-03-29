@@ -33,6 +33,9 @@ class CreateSachTable extends Migration
             $table->string('nxb_maFK', 20);
             $table->string('tl_maFK', 20);
             $table->string('nn_maFK', 20);
+            $table->string('cd_maFK', 20);
+            $table->string('tg_maFK', 20);
+            $table->string('dg_maFK', 20);
 
             $table->primary('s_sku');
             $table->foreign('nxb_maFK')->references('nxb_ma')
@@ -41,6 +44,12 @@ class CreateSachTable extends Migration
                 ->on('theloai')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('nn_maFK')->references('nn_ma')
                 ->on('ngonngu')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('cd_maFK')->references('cd_ma')
+                ->on('chude')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('tg_maFK')->references('tg_ma')
+                ->on('tacgia')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('dg_maFK')->references('dg_ma')
+                ->on('dichgia')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

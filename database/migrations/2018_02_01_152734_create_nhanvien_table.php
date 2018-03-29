@@ -13,7 +13,7 @@ class CreateNhanvienTable extends Migration
      */
     public function up()
     {
-        Schema::create('nhanvien', function (Blueprint $table) {
+        Schema::create('nhanvienTableSeeder', function (Blueprint $table) {
             $table->string('nv_ma', 10);
             $table->string('nv_taiKhoan', 50);
             $table->string('nv_matKhau', 32);
@@ -30,7 +30,7 @@ class CreateNhanvienTable extends Migration
 
             $table->unique(['nv_email', 'nv_taiKhoan']);
             $table->primary('nv_ma');
-            $table->foreign('q_maFK')->references('q_ma')->on('quyen')
+            $table->foreign('q_maFK')->references('q_ma')->on('quyenTableSeeder')
                 ->onDelete('cascade')->onUpdate('cascade');
 
 
@@ -44,6 +44,6 @@ class CreateNhanvienTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nhanvien');
+        Schema::dropIfExists('nhanvienTableSeeder');
     }
 }

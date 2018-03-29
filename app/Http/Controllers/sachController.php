@@ -144,19 +144,19 @@ class sachController extends Controller
     }
 
 //    Kiem tra ton tai cua sku
-    public function checkExist_name($value){
-        try{
-            $sach_check = sach::where('s_sku',$value)->first();
-            return response(['error'=>false,
-                            'message'=>$sach_check!=null?"true":"false"],200);
-        }
-        catch (QueryException $e){
-            return response(['error'=>true,
-                            'message'=> $e->getMessage()], 200);
-        }
-        catch (PDOException $e){
-            return response(['error'=>true,
-                            'message'=>$e->getMessage()],200);
-        }
-    }
+//    public function checkExist_name($value){
+//        try{
+//            $sach_check = sach::where('s_sku',$value)->first();
+//            return response(['error'=>false,
+//                            'message'=>$sach_check!=null?"true":"false"],200);
+//        }
+//        catch (QueryException $e){
+//            return response(['error'=>true,
+//                            'message'=> $e->getMessage()], 200);
+//        }
+//        catch (PDOException $e){
+//            return response(['error'=>true,
+//                            'message'=>$e->getMessage()],200);
+//        }
+//    }
 }
