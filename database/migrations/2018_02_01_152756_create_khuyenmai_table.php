@@ -33,11 +33,11 @@ class CreateKhuyenmaiTable extends Migration
 
             $table->unique('km_ten');
             $table->primary('km_ma');
-            $table->foreign('nv_nguoiLap')->references('nv_ma')->on('nhanvienTableSeeder')
+            $table->foreign('nv_nguoiLap')->references('nv_ma')->on('nhanvien')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('nv_kyNhay')->references('nv_ma')->on('nhanvienTableSeeder')
+            $table->foreign('nv_kyNhay')->references('nv_ma')->on('nhanvien')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('nv_kyDuyet')->references('nv_ma')->on('nhanvienTableSeeder')
+            $table->foreign('nv_kyDuyet')->references('nv_ma')->on('nhanvien')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

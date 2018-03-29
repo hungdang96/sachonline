@@ -148,6 +148,22 @@ class khachhangController extends Controller
         }
     }
 
+    public function checkExistName($value){
+        try{
+            $khachhang_check = khachhang::where('kh_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$tacgia_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
+
 //    public function returnView()
 //    {
 //        return View('hello')->with(['hoten'=>'Đặng Thanh Hùng',

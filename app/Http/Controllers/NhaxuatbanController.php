@@ -129,4 +129,20 @@ class nhaxuatbanController extends Controller
             ], 200);
         }
     }
+
+    public function checkExistName($value){
+        try{
+            $nxb_check = nhaxuatban::where('nxb_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$nxb_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
 }

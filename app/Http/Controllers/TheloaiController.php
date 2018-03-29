@@ -120,4 +120,20 @@ class theloaiController extends Controller
                             'message'=>"Không thể tìm thấy thể loại theloai[{$id}]"],200);
         }
     }
+
+    public function checkExistName($value){
+        try{
+            $theloai_check = theloai::where('tl_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$theloai_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
 }

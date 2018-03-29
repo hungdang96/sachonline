@@ -102,7 +102,7 @@ class nhaphathanhController extends Controller
             $nhaphathanh->nph_diaChi = $request->nph_diaChi;
             $nhaphathanh->nph_sdt = $request->nph_sdt;
             $nhaphathanh->nph_email = $request->nph_email;
-            $nhanvien->save();
+            $nhaphathanh->save();
 
             return response([
                     'error' => true,
@@ -137,6 +137,21 @@ class nhaphathanhController extends Controller
                     'message'=> "Khong tim thay nha phat hanh [{$id}]"
             ], 200);
         }
-    
+    }
+
+    public function checkExistName($value){
+        try{
+            $nph_check = nhaphathanh::where('nph_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$nph_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
     }
 }

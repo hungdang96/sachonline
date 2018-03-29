@@ -15,7 +15,7 @@ class CreateHoadonleTable extends Migration
     {
         Schema::create('hoadonle', function (Blueprint $table) {
             $table->string('hdl_ma', 20);
-            $table->string('hdl_nguoiMuaHang', 50);
+            $table->unsignedInteger('hdl_nguoiMuaHang');
             $table->string('hdl_dienThoai', 15);
             $table->string('hdl_diaChi', 250);
             $table->string('nv_lapHoaDon', 20);
@@ -28,7 +28,10 @@ class CreateHoadonleTable extends Migration
                 ->references('dh_ma')->on('donhang')
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('nv_lapHoaDon')
-                ->references('nv_ma')->on('nhanvienTableSeeder')
+                ->references('nv_ma')->on('nhanvien')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('hdl_nguoiMuaHang')
+                ->references('kh_ma')->on('khachhang')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }

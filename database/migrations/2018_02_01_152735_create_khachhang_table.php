@@ -14,7 +14,7 @@ class CreateKhachhangTable extends Migration
     public function up()
     {
         Schema::create('khachhang', function (Blueprint $table) {
-            $table->string('kh_ma', 20);
+            $table->unsignedInteger('kh_ma')->autoIncrement();
             $table->string('kh_taiKhoan', 50);
             $table->string('kh_matKhau', 32);
             $table->string('kh_hoTen', 100);
@@ -31,7 +31,6 @@ class CreateKhachhangTable extends Migration
             $table->unsignedTinyInteger('kh_trangThai')->default('2');
 
             $table->unique(['kh_taiKhoan','kh_email','kh_hoTen','kh_soDienThoai']);
-            $table->primary('kh_ma');
         });
     }
 
