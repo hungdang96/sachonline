@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f182ae22-a575-4c03-90e3-dd1ea66bc587" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sachonline.iml" afterPath="$PROJECT_DIR$/.idea/sachonline.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/public/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ex1.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,43 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="theloai.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/theloai.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-              <folding>
-                <marker date="1522342630478" expanded="true" signature="613:648" ph="..." />
-                <marker date="1522342630478" expanded="true" signature="848:2944" ph="..." />
-                <marker date="1522342630478" expanded="true" signature="1698:1708" ph="..." />
-                <marker date="1522342630478" expanded="true" signature="1735:1746" ph="..." />
-                <marker date="1522342630478" expanded="true" signature="2482:2915" ph="..." />
-                <marker date="1522342630478" expanded="true" signature="2524:2914" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="80" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="13" selection-end-column="80" />
-              <folding>
-                <marker date="1520514040017" expanded="true" signature="30:50" ph="..." />
-                <marker date="1520514040017" expanded="true" signature="680:702" ph="..." />
-                <marker date="1520514040017" expanded="true" signature="748:783" ph="..." />
-                <marker date="1520514040017" expanded="true" signature="1324:1344" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="209" column="88" lean-forward="false" selection-start-line="209" selection-start-column="88" selection-end-line="209" selection-end-column="88" />
+            <state relative-caret-position="574">
+              <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -171,8 +135,8 @@
         <option value="$PROJECT_DIR$/resources/views/hello.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/test.html" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/theloai.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -258,7 +222,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -499,15 +463,15 @@
       <workItem from="1522327025504" duration="3522000" />
       <workItem from="1522330602698" duration="1263000" />
       <workItem from="1522331982779" duration="2068000" />
-      <workItem from="1522336181696" duration="6414000" />
+      <workItem from="1522336181696" duration="6564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140493000" />
+    <option name="totallyTimeSpent" value="140643000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -516,7 +480,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22341569" sideWeight="0.5154185" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2555066" sideWeight="0.49769852" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986037" sideWeight="0.4845815" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22291666" sideWeight="0.4845815" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16541353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1027,11 +991,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/theloai.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="209" column="88" lean-forward="false" selection-start-line="209" selection-start-column="88" selection-end-line="209" selection-end-column="88" />
-          <folding />
+        <state relative-caret-position="684">
+          <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+          <folding>
+            <marker date="1522342630478" expanded="true" signature="613:648" ph="..." />
+            <marker date="1522342630478" expanded="true" signature="848:2944" ph="..." />
+            <marker date="1522342630478" expanded="true" signature="1698:1708" ph="..." />
+            <marker date="1522342630478" expanded="true" signature="1735:1746" ph="..." />
+            <marker date="1522342630478" expanded="true" signature="2482:2915" ph="..." />
+            <marker date="1522342630478" expanded="true" signature="2524:2914" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,18 +1019,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/theloai.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <marker date="1522342630478" expanded="true" signature="613:648" ph="..." />
-            <marker date="1522342630478" expanded="true" signature="848:2944" ph="..." />
-            <marker date="1522342630478" expanded="true" signature="1698:1708" ph="..." />
-            <marker date="1522342630478" expanded="true" signature="1735:1746" ph="..." />
-            <marker date="1522342630478" expanded="true" signature="2482:2915" ph="..." />
-            <marker date="1522342630478" expanded="true" signature="2524:2914" ph="..." />
-          </folding>
+        <state relative-caret-position="574">
+          <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
