@@ -206,8 +206,9 @@ Route::group(['prefix'=>'administrator'], function () {
 
     //Route thể loại
     Route::group(['prefix'=>'theloai'],function (){
-       Route::get('index', function (){return View('admin.theloai');})->name('tl_index');
-       Route::post('checkmatl/{value}', ['uses' => 'theloaiController@checkID'])->name('tl_checkma');
+       Route::get('dstheloai', ['uses' => 'theloaiController@index'])->name('tl_danhsat');
+       Route::get('showlist', function (){return View('admin.theloai');})->name('show   danhsach');
+       Route::post('checkmatl/{value}', ['uses' => 'theloaiController@checkExistID'])->name('tl_checkma');
        Route::post('checktentl/{value}', ['uses' => 'theloaiController@checkName'])->name('tl_checkten');
        Route::post('add', ['uses' => 'theloaiController@store'])->name('tl_add');
        Route::post('edit/{id}', ['uses' => 'theloaiController@edit'])->name('tl_edit');
