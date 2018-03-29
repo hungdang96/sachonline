@@ -152,7 +152,7 @@ class khachhangController extends Controller
         try{
             $khachhang_check = khachhang::where('kh_ten',$value)->first();
             return response(['error'=>false,
-                'message'=>$tacgia_check!=null?"true":"false"],200);
+                'message'=>$khachhang_check!=null?"true":"false"],200);
         }
         catch (QueryException $e){
             return response(['error'=>true,

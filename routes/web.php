@@ -141,7 +141,7 @@ Route::group(['prefix'=>'administrator'], function () {
     });
 
     //Route Quyền
-    Route::group(['prefix' => 'quyenTableSeeder'], function () {
+    Route::group(['prefix' => 'quyen'], function () {
         Route::get('index', function () {return View('admin.quyenTableSeeder');})->name('q_index');
         Route::post('checkquyen/{value}', ['uses' => 'QuyenController@checkExistName'])->name('q_check');
         Route::post('add', ['uses' => 'QuyenController@store'])->name('q_add');

@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\thanhtoan;
 use function compact;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use function json_encode;
+use PDOException;
 use function response;
 
 class thanhtoanController extends Controller
@@ -121,6 +123,22 @@ class thanhtoanController extends Controller
         }else{
             return response(['error'=>true,
                             'message'=>"Không tìm thấy thanhtoan[{$id}]"],200);
+        }
+    }
+
+    public function checkExistID($value){
+        try{
+            $id_check = thanhtoan::where('tt_ma',$value)->first();
+            return response(['error'=>false,
+                'message'=>$id_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
         }
     }
 }

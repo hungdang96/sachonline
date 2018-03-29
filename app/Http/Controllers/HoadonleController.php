@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\hoadonle;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use PDOException;
 
 class hoadonleController extends Controller
 {
@@ -134,6 +136,38 @@ class hoadonleController extends Controller
                     'error' => true,
                     'message'=> "Khong tim thay hoa don le [{$id}]"
             ], 200);
+        }
+    }
+
+    public function checkExistName($value){
+        try{
+            $tacgia_check = tacgia::where('cd_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$tacgia_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
+
+    public function checkExistID($value){
+        try{
+            $id_check = hoadonle::where('hdl_ma',$value)->first();
+            return response(['error'=>false,
+                'message'=>$id_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
         }
     }
 }

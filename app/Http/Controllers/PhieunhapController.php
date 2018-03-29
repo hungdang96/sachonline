@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\phieunhap;
 use function compact;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use function json_encode;
+use PDOException;
 
 class phieunhapController extends Controller
 {
@@ -128,6 +130,22 @@ class phieunhapController extends Controller
             return response(['error'=>false,'message' => "Đã xóa phieunhap[{$id}]"],200);
         }else{
             return response(['error'=>true,'message'=>"Không tìm thấy phiếu nhập phieunhap[{$id}]"],200);
+        }
+    }
+
+    public function checkExistID($value){
+        try{
+            $id_check = phieunhap::where('pn_ma',$value)->first();
+            return response(['error'=>false,
+                'message'=>$id_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
         }
     }
 }

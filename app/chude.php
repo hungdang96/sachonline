@@ -12,7 +12,7 @@ class chude extends Model
 
 
     protected $table = 'chude';
-    protected $fillable = ['cd_ma','cd_ten','cd_dienGiai','cd_taoMoi','cd_capNhat','cd_trangThai','s_maFK'];
+    protected $fillable = ['cd_ma','cd_ten','cd_dienGiai','cd_taoMoi','cd_capNhat','cd_trangThai'];
 
     protected $primaryKey = 'cd_ma';
     protected $dates = ['cd_taoMoi','cd_capNhat'];

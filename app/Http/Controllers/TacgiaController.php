@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\tacgia;
 use App\theloai;
 use function compact;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use function json_encode;
+use PDOException;
 use function response;
 
 class tacgiaController extends Controller

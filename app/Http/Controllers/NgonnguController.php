@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use app\ngonngu;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use PDOException;
 
 class ngonnguController extends Controller
 {
@@ -128,5 +130,36 @@ class ngonnguController extends Controller
             ], 200);
         }
     }
+
+    public function checkExistName($value){
+        try{
+            $nn_check = ngonngu::where('nn_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$nn_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
+
+    public function checkExistID($value){
+        try{
+            $id_check = ngonngu::where('nn_ma',$value)->first();
+            return response(['error'=>false,
+                'message'=>$id_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
     }
 }

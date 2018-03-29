@@ -12,7 +12,7 @@ class dichgia extends Model
     const UPDATED_AT = 'dg_capNhat';
 
     protected $table = 'dichgia';
-    protected $fillable = ['dg_ma','dg_ten','dg_taoMoi','dg_capNhat','s_maFK'];
+    protected $fillable = ['dg_ma','dg_ten','dg_taoMoi','dg_capNhat'];
 
     protected $primaryKey = 'dg_ma';
     protected $dates = ['dg_taoMoi','dg_capNhat'];

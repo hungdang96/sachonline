@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\nhanvien;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use PDOException;
 
 class nhanvienController extends Controller
 {
@@ -141,6 +143,38 @@ class nhanvienController extends Controller
                     'error' => true,
                     'message'=> "Khong tim thay nhan vien [{$id}]"
             ], 200);
+        }
+    }
+
+    public function checkExistName($value){
+        try{
+            $nv_check = nhanvien::where('nv_ten',$value)->first();
+            return response(['error'=>false,
+                'message'=>$nv_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
+
+    public function checkExistID($value){
+        try{
+            $id_check = nhanvien::where('nv_ma',$value)->first();
+            return response(['error'=>false,
+                'message'=>$id_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
         }
     }
 }

@@ -60,8 +60,8 @@ class khachhangTableSeeder extends Seeder
         }
         $today = new DateTime('2018-03-03 9:00:00');
         for($i = 0; $i < $nCustomer; $i++){
-            $id_temp = $faker->bothify('KH-##???-###??-##?#?');
-            $id = $faker->toUpper($id_temp);
+//            $id_temp = $faker->bothify('KH-##???-###??-##?#?');
+            $id = $i+1;
             //Lay gioi tinh cua khach hang thu i
             if($customer[$i]["gender"]==0){
                 $gender = 'Nữ';
@@ -79,7 +79,7 @@ class khachhangTableSeeder extends Seeder
             //sinh email dua vao thong tin ca nhan
             $email = $uPI->Email($name, $birthDay, "", "?","", VnBase::VnLowerCase, VnBase::VnMixed, VnBase::VnTrue);
             //sinh ten dang nhap dua vao thong tin khach hang
-            $usr = $uPI->Username($name, $birthDay, "?", "", VnBase::VnLowerCase, VnBase::VnMixed, VnBase::VnTrue);
+            $usr = $uPI->Username($name, $birthYear, "", "", VnBase::VnLowerCase, VnBase::VnMixed, VnBase::VnTrue);
             //sinh ngau nhien mat khau voi thua toan bam md5
             $pwd = md5($faker->text(10));
             //sinh ngau nhien sdt cho khach hang

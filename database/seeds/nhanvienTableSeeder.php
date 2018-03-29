@@ -71,7 +71,7 @@ class nhanvienTableSeeder extends Seeder
             //Lay ten cua khach hang thu i
             $name = $customer[$i]["name"];
             //Sinh ngau nhien tuoi
-            $age = $uPI->Age(15);
+            $age = $uPI->Age(23);
             //Tinh nam sinh cua khach hang dua vao tuoi
             $birthYear = $uPI->BirthYearValue($age);
             //sinh ngau nhien ngay sinh
@@ -79,7 +79,7 @@ class nhanvienTableSeeder extends Seeder
             //sinh email dua vao thong tin ca nhan
             $email = $uPI->Email($name, $birthDay, "", "?","", VnBase::VnLowerCase, VnBase::VnMixed, VnBase::VnTrue);
             //sinh ten dang nhap dua vao thong tin khach hang
-            $usr = $uPI->Username($name, $birthDay, "?", "", VnBase::VnLowerCase, VnBase::VnMixed, VnBase::VnTrue);
+            $usr = $uPI->Username($name, $birthYear, "", "", VnBase::VnLowerCase, VnBase::VnMixed, VnBase::VnTrue);
             //sinh ngau nhien mat khau voi thua toan bam md5
             $pwd = md5($faker->text(10));
             //sinh ngau nhien sdt cho khach hang
@@ -108,6 +108,6 @@ class nhanvienTableSeeder extends Seeder
                 'q_maFK' => $quyenMa
             ]);
         }
-        DB::table('nhanvienTableSeeder')->insert($list);
+        DB::table('nhanvien')->insert($list);
     }
 }

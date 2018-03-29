@@ -35,6 +35,6 @@ class quyenTableSeeder extends Seeder
                 'q_trangThai' => $trangThai
             ]);
         }
-        DB::table('quyenTableSeeder')->insert($list);
+        DB::table('quyen')->insert($list);
     }
 }

@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\theloai;
 use function compact;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use function json_encode;
+use PDOException;
 
 class theloaiController extends Controller
 {
@@ -126,6 +128,22 @@ class theloaiController extends Controller
             $theloai_check = theloai::where('tl_ten',$value)->first();
             return response(['error'=>false,
                 'message'=>$theloai_check!=null?"true":"false"],200);
+        }
+        catch (QueryException $e){
+            return response(['error'=>true,
+                'message'=> $e->getMessage()], 200);
+        }
+        catch (PDOException $e){
+            return response(['error'=>true,
+                'message'=>$e->getMessage()],200);
+        }
+    }
+
+    public function checkExistID($value){
+        try{
+            $id_check = theloai::where('tl_ma',$value)->first();
+            return response(['error'=>false,
+                'message'=>$id_check!=null?"true":"false"],200);
         }
         catch (QueryException $e){
             return response(['error'=>true,

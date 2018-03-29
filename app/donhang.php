@@ -11,7 +11,7 @@ class donhang extends Model
     public $incrementing = false;
 
     protected $table = 'donhang';
-    protected $fillable = ['dh_ma','dh_thoiGianDatHang','dh_nguoiNhan','dh_diaChi','dh_dienThoai','dh_nguoiGui','dh_daThanhToan','nv_xuLy','dh_ngayXuLy','nv_giaoHang','dh_ngayLapPhieuGiao','dh_ngayGiaoHang','dh_taoMoi','dh_capNhat','dh_trangThai','vc_maFK','tt_maFK'];
+    protected $fillable = ['dh_ma','dh_thoiGianDatHang','dh_nguoiDat','dh_diaChi','dh_dienThoai','dh_daThanhToan','nv_xuLy','dh_ngayXuLy','nv_giaoHang','dh_ngayLapPhieuGiao','dh_ngayGiaoHang','dh_taoMoi','dh_capNhat','dh_trangThai','vc_maFK','tt_maFK'];
 
     protected $primaryKey = 'dh_ma';
     protected $dates = ['dh_thoiGianDatHang','dh_ngayXuLy','dh_ngayLapPhieuGiao','dh_ngayGiaoHang','dh_taoMoi','dh_capNhat'];

@@ -28,6 +28,6 @@ class ngonnguTableSeeder extends Seeder
                 //TODO insert each column info with each element.
             ]);
         }
-        DB::table('...TableSeeder')->insert($list);
+        DB::table('...')->insert($list);
     }
 }
