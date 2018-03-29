@@ -16,18 +16,21 @@ class dichgiaTableSeeder extends Seeder
         $now = Carbon::now();
         //Tạo mảng rỗng $list[]
         $list = [];
+        $faker = Faker\Factory::create("vi_VN");
         //Khởi tạo các giá trị
         $n = 6;
-        $FirstColElements = [];
-        $SecondColElements = [];
-        //......And more than array if here is more than 2 columns in your table db, except the timestamp columns
-        $trangThai = 1;
+        $DGname = ['Hồng Nhật', 'Bảo Long', 'Huỳnh Lý', 'Vũ Thái Hà', 'Trần Lan Anh', 'Trần Thị Thùy Trang'];
 
         for($i=1; $i <= $n; $i++){
+            $id_temp = $faker->bothify('DG-A###');
+            $id = $faker->toUpper($id_temp);
             array_push($list,[
                 //TODO insert each column info with each element.
+                'dg_ma' => $id,
+                'dg_ten' => $DGname[$i-1],
+
             ]);
         }
-        DB::table('...TableSeeder')->insert($list);
+        DB::table('dichgia')->insert($list);
     }
 }
