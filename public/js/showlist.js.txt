@@ -1,0 +1,58 @@
+var app = angular.module("dataApp", []);
+app.controller("dataExcuteController", function ($scope, $window) {
+    $scope.theloai = [{stt: '1', name: 'Truyện ngắn', trangThai: '1'},
+        {stt: '2', name: 'Truyện dài', trangThai: '1'},
+        {stt: '3', name: 'Tiểu thuyết', trangThai: '0'},
+        {stt: '4', name: 'Sách thông minh', trangThai: '1'},
+        {stt: '5', name: 'Tạp chí', trangThai: '0'},
+        {stt: '6', name: 'Bài báo khoa học', trangThai: '0'}];
+    
+    // Add theloai function
+    $scope.addtheloai = function () {
+        //Add a new item to the array
+        var newtheloai = {
+            stt: $scope.theloai.length+1,
+            name: $scope.addName,
+            trangThai: $scope.addstt
+        };
+
+        //Push new theloai into the json object.
+        $scope.theloai.push(newtheloai);
+        $scope.addName = '';
+        $scope.addstt = '';
+    };
+
+    // Edit theloai function
+    $scope.edittheloai = function (index) {
+        var stt = $scope.theloai[index].stt;
+        var name = $scope.theloai[index].name;
+        var tt = $scope.theloai[index].trangThai;
+        $scope.editid = stt;
+        $scope.editName = name;
+        $scope.edittt = tt;
+    };
+
+    // Update theloai function
+    $scope.updatetheloai = function () {
+        angular.forEach($scope.theloai, function(value, key){
+            if (value.stt == $scope.editid){
+                if ($window.confirm("Do you want to modify '" + value.name + "'?")){
+                    value.name = $scope.editName;
+                    value.trangThai = $scope.edittt;
+                    this.save();
+                }
+            }
+        });
+    };
+
+    // Delete theloai function
+    $scope.removetheloai = function (index) {
+        //Find the record using index from array
+        var name = $scope.theloai[index].name;
+        if ($window.confirm("Do you want to remove " + name + "?")){
+            //Remove theloai
+            $scope.theloai.splice(index, 1);
+        }
+    };
+
+});
