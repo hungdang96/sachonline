@@ -18,7 +18,7 @@ class CreateGopyTable extends Migration
             $table->timestamp('gy_thoiGian')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->text('gy_noiDung');
             $table->string('s_maFK', 80);
-            $table->unsignedInteger('kh_maFK');
+            $table->string('kh_maFK',80);
 
             $table->foreign('s_maFK')
                 ->references('s_sku')->on('sach')

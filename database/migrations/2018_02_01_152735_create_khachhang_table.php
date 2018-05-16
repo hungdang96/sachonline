@@ -31,6 +31,7 @@ class CreateKhachhangTable extends Migration
             $table->unsignedTinyInteger('kh_trangThai')->default('1');
 
             $table->unique(['kh_taiKhoan','kh_email','kh_hoTen','kh_soDienThoai']);
+            $table->primary('kh_ma');
         });
     }
 

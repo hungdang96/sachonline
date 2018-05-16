@@ -17,7 +17,7 @@ class CreateDonhangTable extends Migration
             $table->string('dh_ma', 80);
             $table->dateTime('dh_thoiGianDatHang')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('dh_nguoiDat', 80);
+            $table->string('kh_maFK',80);
             $table->string('dh_diaChi', 250);
             $table->string('dh_dienThoai', 15);
             $table->unsignedTinyInteger('dh_daThanhToan')->default('0');
@@ -42,7 +42,7 @@ class CreateDonhangTable extends Migration
                 ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('tt_maFK')->references('tt_ma')->on('thanhtoan')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('dh_nguoiDat')->references('kh_ma')->on('khachhang')
+            $table->foreign('kh_maFK')->references('kh_ma')->on('khachhang')
                 ->onDelete('cascade')->onUpdate('cascade');
            
         });
