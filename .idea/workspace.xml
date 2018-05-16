@@ -3,10 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="f182ae22-a575-4c03-90e3-dd1ea66bc587" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TheloaiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TheloaiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/theloai.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/theloai.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/theloaiTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/theloaiTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/theloai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/theloai.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152518_create_quyen_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152518_create_quyen_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152735_create_khachhang_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152735_create_khachhang_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152756_create_khuyenmai_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152756_create_khuyenmai_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152816_create_thanhtoan_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152816_create_thanhtoan_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152817_create_vanchuyen_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152817_create_vanchuyen_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152818_create_donhang_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152818_create_donhang_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152819_create_nhaphathanh_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152819_create_nhaphathanh_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_152919_create_phieunhap_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_152919_create_phieunhap_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153121_create_nhaxuatban_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153121_create_nhaxuatban_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153140_create_theloai_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153140_create_theloai_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153221_create_ngonngu_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153221_create_ngonngu_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153238_create_dichgia_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153238_create_dichgia_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153239_create_tacgia_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153239_create_tacgia_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153240_create_chude_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153240_create_chude_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153241_create_sach_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153241_create_sach_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153420_create_hinhanh_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153420_create_hinhanh_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153456_create_gopy_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153456_create_gopy_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153515_create_chitietdonhang_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153515_create_chitietdonhang_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153537_create_chudekhuyenmai_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153537_create_chudekhuyenmai_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153555_create_hoadonle_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153555_create_hoadonle_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_02_01_153616_create_chitietnhap_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_02_01_153616_create_chitietnhap_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,51 +77,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="theloai.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/theloai.blade.php">
+      <file leaf-file-name="2018_02_01_152818_create_donhang_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152818_create_donhang_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1160">
-              <caret line="148" column="4" selection-start-line="148" selection-start-column="4" selection-end-line="148" selection-end-column="4" />
-              <folding>
-                <marker date="1522762835338" expanded="true" signature="603:638" ph="..." />
-                <marker date="1522762835338" expanded="true" signature="8036:8059" ph="..." />
-              </folding>
+            <state relative-caret-position="244">
+              <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showlist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/showlist.js">
+      <file leaf-file-name="2018_02_01_152735_create_khachhang_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152735_create_khachhang_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="58" lean-forward="true" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theloaiController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/theloaiController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="21" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="208" column="67" selection-start-line="208" selection-start-column="67" selection-end-line="208" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theloai.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/theloai.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="195">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -139,23 +125,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/chudekhuyenmai.php" />
-        <option value="$PROJECT_DIR$/app/gopy.php" />
-        <option value="$PROJECT_DIR$/app/hoadonle.php" />
-        <option value="$PROJECT_DIR$/app/ngonngu.php" />
-        <option value="$PROJECT_DIR$/resources/views/master.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/ex1.html" />
-        <option value="$PROJECT_DIR$/resources/views/ex1.html" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/database/seeds/quyenTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/ngonnguTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/chudebanTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/sachTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153439_create_chude_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153240_create_chude_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153239_create_tacgia_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153238_create_dichgia_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153241_create_sach_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/sachController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ChudeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DichgiaController.php" />
@@ -165,12 +135,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/NhaphathanhController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/khachhangController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153020_create_khachhang_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153456_create_gopy_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152518_create_quyen_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153555_create_hoadonle_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152734_create_nhanvien_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152756_create_khuyenmai_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152818_create_donhang_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/nhaphathanhTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/nhaxuatbanTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/tacgiaTableSeeder.php" />
@@ -190,6 +155,27 @@
         <option value="$PROJECT_DIR$/database/seeds/theloaiTableSeeder.php" />
         <option value="$PROJECT_DIR$/public/js/showlist.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/theloai.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152735_create_khachhang_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152518_create_quyen_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152756_create_khuyenmai_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152816_create_thanhtoan_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152817_create_vanchuyen_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152819_create_nhaphathanh_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152919_create_phieunhap_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153121_create_nhaxuatban_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153140_create_theloai_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153221_create_ngonngu_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153238_create_dichgia_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153239_create_tacgia_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153240_create_chude_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153241_create_sach_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153420_create_hinhanh_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153456_create_gopy_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153515_create_chitietdonhang_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153537_create_chudekhuyenmai_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153555_create_hoadonle_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_153616_create_chitietnhap_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_02_01_152818_create_donhang_table.php" />
       </list>
     </option>
   </component>
@@ -209,6 +195,11 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -312,80 +303,18 @@
           <expand>
             <path>
               <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sachonline" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sachonline" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="seeds" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sachonline" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sachonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="sachonline" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -550,55 +479,68 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170676000" />
+    <option name="totallyTimeSpent" value="172065000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5023015" side_tool="true" weight="0.3270925" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32983682" />
       <window_info id="npm" order="2" sideWeight="0.5154185" side_tool="true" weight="0.22341569" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32983682" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32929516" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49769852" weight="0.25333333" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4845815" visible="true" weight="0.1686198" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49769852" visible="true" weight="0.25071225" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4845815" visible="true" weight="0.26979867" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.16536458" />
+      <window_info anchor="right" id="Database" order="3" weight="0.16442953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24971232" />
       <window_info id="Favorites" order="3" sideWeight="0.5154185" side_tool="true" weight="0.22341569" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info id="npm" order="2" sideWeight="0.5154185" side_tool="true" weight="0.22341569" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4845815" visible="true" weight="0.1686198" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24971232" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32983682" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32929516" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.16536458" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5023015" side_tool="true" weight="0.3270925" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32933334" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="11" weight="0.3287483" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32737276" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49769852" weight="0.25333333" />
+      <window_info id="Favorites" order="3" sideWeight="0.5154185" side_tool="true" weight="0.22341569" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info id="npm" order="2" sideWeight="0.5154185" side_tool="true" weight="0.22341569" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32929516" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4845815" weight="0.44589308" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24971232" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32983682" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.16536458" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49769852" weight="0.2555066" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5023015" side_tool="true" weight="0.3270925" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32983682" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="3" sideWeight="0.5154185" side_tool="true" weight="0.22341569" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -756,151 +698,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153238_create_dichgia_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/sachController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="160" column="7" lean-forward="true" selection-start-line="146" selection-start-column="6" selection-end-line="160" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ChudeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="149" column="5" selection-start-line="135" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DichgiaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="140" column="43" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a20a263e/244fc50b-16c3-4c14-af90-c1775d47d9ab/sachonline.quyentableseeder">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QuyenController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="129" column="50" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/tacgiaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="139" column="5" lean-forward="true" selection-start-line="125" selection-start-column="4" selection-end-line="139" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NhaphathanhController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="143" column="48" selection-start-line="143" selection-start-column="48" selection-end-line="143" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NhaxuatbanController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/khachhangController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="152" column="51" selection-start-line="152" selection-start-column="51" selection-end-line="152" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153456_create_gopy_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152734_create_nhanvien_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152518_create_quyen_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153241_create_sach_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153555_create_hoadonle_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152816_create_thanhtoan_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152756_create_khuyenmai_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="39" column="76" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152818_create_donhang_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="44" column="78" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/sachTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/dichgiaTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/tacgiaTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/nhaxuatbanTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -915,27 +712,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/a20a263e/244fc50b-16c3-4c14-af90-c1775d47d9ab/sachonline.nhanvien">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a20a263e/244fc50b-16c3-4c14-af90-c1775d47d9ab/sachonline.khachhang">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152735_create_khachhang_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="32" column="83" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/a20a263e/244fc50b-16c3-4c14-af90-c1775d47d9ab/sachonline.nhanvien" />
+    <entry file="das://table:/a20a263e/244fc50b-16c3-4c14-af90-c1775d47d9ab/sachonline.khachhang" />
     <entry file="file://$PROJECT_DIR$/database/seeds/khachhangTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -943,18 +721,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/test/AngularJS_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/test/AngularJS_4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/AngularJS_3.html" />
+    <entry file="file://$USER_HOME$/Desktop/test/AngularJS_4.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/hello.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -962,13 +730,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_angularjs_1.6.9_angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2226">
-          <caret line="106" column="7" lean-forward="true" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_angularjs_1.6.9_angular.js" />
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -983,11 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/test.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/admin/theloai.php" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_angularjs_1.6.7_angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1953" />
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_angularjs_1.6.7_angular.js" />
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -995,20 +753,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/func.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/sachonlineTheme/sachonlineTheme/theme.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/func.js" />
+    <entry file="file://$USER_HOME$/Desktop/sachonlineTheme/sachonlineTheme/theme.html" />
     <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -1016,13 +762,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/test/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="90" column="82" selection-start-line="90" selection-start-column="82" selection-end-line="90" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/index.html" />
     <entry file="file://$PROJECT_DIR$/public/css/custom.css" />
     <entry file="file://$PROJECT_DIR$/public/js/validForm.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1066,7 +806,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/theloaiController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TheloaiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="21" selection-end-column="9" />
@@ -1084,10 +824,156 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1160">
           <caret line="148" column="4" selection-start-line="148" selection-start-column="4" selection-end-line="148" selection-end-column="4" />
-          <folding>
-            <marker date="1522762835338" expanded="true" signature="603:638" ph="..." />
-            <marker date="1522762835338" expanded="true" signature="8036:8059" ph="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152518_create_quyen_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152756_create_khuyenmai_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152816_create_thanhtoan_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152817_create_vanchuyen_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152819_create_nhaphathanh_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152919_create_phieunhap_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153140_create_theloai_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153121_create_nhaxuatban_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153221_create_ngonngu_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153238_create_dichgia_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153239_create_tacgia_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153240_create_chude_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153241_create_sach_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-164">
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153420_create_hinhanh_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153456_create_gopy_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153515_create_chitietdonhang_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153537_create_chudekhuyenmai_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153555_create_hoadonle_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_153616_create_chitietnhap_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-188">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152735_create_khachhang_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_02_01_152818_create_donhang_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>

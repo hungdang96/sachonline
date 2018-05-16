@@ -17,8 +17,8 @@ class CreateChudekhuyenmaiTable extends Migration
             $table->string('cdkm_giaTri', 10);
             $table->unsignedTinyInteger('cdkm_trangThai')
                 ->default('0');
-            $table->string('km_maFK', 20);
-            $table->string('cd_maFK', 20);
+            $table->string('km_maFK', 80);
+            $table->string('cd_maFK', 80);
 
             $table->foreign('km_maFK')
                 ->references('km_ma')->on('khuyenmai')

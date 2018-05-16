@@ -14,12 +14,12 @@ class CreateTacgiaTable extends Migration
     public function up()
     {
         Schema::create('tacgia', function (Blueprint $table) {
-            $table->string('tg_ma', 20);
+            $table->string('tg_ma', 80);
             $table->string('tg_ten', 100);
             $table->string('tg_quocTich', 3);
-            $table->timestamp('tg_tao')
+            $table->timestamp('created_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('tg_capNhat')
+            $table->timestamp('updated_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
 
             $table->unique('tg_ten');

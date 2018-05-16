@@ -14,11 +14,11 @@ class CreateDichgiaTable extends Migration
     public function up()
     {
         Schema::create('dichgia', function (Blueprint $table) {
-            $table->string('dg_ma', 20);
+            $table->string('dg_ma', 80);
             $table->string('dg_ten', 100);
-            $table->timestamp('dg_taoMoi')
+            $table->timestamp('created_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('dg_capNhat')
+            $table->timestamp('updated_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
 
             $table->unique(['dg_ten']);

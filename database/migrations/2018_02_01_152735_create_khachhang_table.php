@@ -14,7 +14,7 @@ class CreateKhachhangTable extends Migration
     public function up()
     {
         Schema::create('khachhang', function (Blueprint $table) {
-            $table->unsignedInteger('kh_ma')->autoIncrement();
+            $table->string('kh_ma',80);
             $table->string('kh_taiKhoan', 50);
             $table->string('kh_matKhau', 32);
             $table->string('kh_hoTen', 100);
@@ -24,11 +24,11 @@ class CreateKhachhangTable extends Migration
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->string('kh_diaChi', 250);
             $table->string('kh_soDienThoai', 15);
-            $table->timestamp('kh_taoMoi')
+            $table->timestamp('created_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('kh_capNhat')
+            $table->timestamp('updated_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->unsignedTinyInteger('kh_trangThai')->default('2');
+            $table->unsignedTinyInteger('kh_trangThai')->default('1');
 
             $table->unique(['kh_taiKhoan','kh_email','kh_hoTen','kh_soDienThoai']);
         });

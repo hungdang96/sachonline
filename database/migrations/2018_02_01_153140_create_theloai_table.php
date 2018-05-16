@@ -14,11 +14,11 @@ class CreateTheloaiTable extends Migration
     public function up()
     {
         Schema::create('theloai', function (Blueprint $table) {
-            $table->string('tl_ma', 20);
+            $table->string('tl_ma', 80);
             $table->string('tl_ten', 50);
-            $table->timestamp('tl_taoMoi')
+            $table->timestamp('created_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('tl_capNhat')
+            $table->timestamp('updated_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->unsignedTinyInteger('tl_trangThai')
                 ->default('1');

@@ -14,10 +14,10 @@ class CreateGopyTable extends Migration
     public function up()
     {
         Schema::create('gopy', function (Blueprint $table) {
-            $table->unsignedInteger('gy_ma')->autoIncrement();
+            $table->string('gy_ma',80);
             $table->timestamp('gy_thoiGian')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->text('gy_noiDung');
-            $table->string('s_maFK', 20);
+            $table->string('s_maFK', 80);
             $table->unsignedInteger('kh_maFK');
 
             $table->foreign('s_maFK')

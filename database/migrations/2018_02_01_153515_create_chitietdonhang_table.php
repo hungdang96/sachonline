@@ -16,8 +16,8 @@ class CreateChitietdonhangTable extends Migration
         Schema::create('chitietdonhang', function (Blueprint $table) {
             $table->unsignedInteger('ctdh_soLuong');
             $table->unsignedInteger('ctdh_donGia');
-            $table->string('s_maFK', 20);
-            $table->string('dh_maFK', 20);
+            $table->string('s_maFK', 80);
+            $table->string('dh_maFK', 80);
 
             $table->foreign('s_maFK')
                 ->references('s_sku')->on('sach')
