@@ -159,9 +159,10 @@ Route::group(['prefix'=>'administrator'], function () {
 
     //Route Sách
     Route::group(['prefix' => 'sach'], function () {
-        Route::get('index', function () {return View('admin.sach');})->name('s_index');
+        // Route::get('index', function () {return View('admin.sach');})->name('s_index');
+        Route::get('index', 'sachController@index');
         Route::post('checkSKU/{value}', ['uses' => 'sachController@checkExistSKU'])->name('sku_check');
-        Route::post('add', ['uses' => 'sachController@store'])->name('s_add');
+        Route::get('add', ['uses' => 'sachController@store'])->name('s_add');
         Route::post('edit', ['uses' => 'sachController@edit'])->name('s_edit');
         Route::post('update', ['uses' => 'sachController@update'])->name('s_update');
         Route::post('delete/{id}', ['uses' => 'sachController@destroy'])->name('s_del');
