@@ -58,7 +58,10 @@ class sachController extends Controller
         $sach->s_gioiThieu = $request->s_gioiThieu;
         $sach->nxb_maFK = $request->nxb_ma;
         $sach->tl_maFK = $request->tl_ma;
+        $sach->cd_maFK = $request->cd_ma;
         $sach->nn_maFK = $request->nn_ma;
+        $sach->tg_maFK = $request->tg_ma;
+        $sach->dg_maFK = $request->dg_ma;
         $sach->save();
 
         return response(['error'=>false,'message'=>$sach->toJson()],200);
