@@ -60,8 +60,7 @@ class nhanvienTableSeeder extends Seeder
         }
         $today = new DateTime('2018-03-03 9:00:00');
         for($i = 0; $i < $nCustomer; $i++){
-            $id_temp = $faker->bothify('NV-##?#??');
-            $id = $faker->toUpper($id_temp);
+            $id = guid();
             //Lay gioi tinh cua khach hang thu i
             if($customer[$i]["gender"]==0){
                 $gender = 'Nữ';

@@ -13,19 +13,23 @@ class chudebanTableSeeder extends Seeder
     public function run()
     {
         //khởi tạo carbon
-        $now = Carbon::now();
+//        $now = Carbon::now();
         //Tạo mảng rỗng $list[]
         $list = [];
         //Khởi tạo các giá trị
         $n = 6;
-        $FirstColElements = [];
-        $SecondColElements = [];
+        $chude = ['Thiếu nhi','Gia đình & hôn nhân','Tâm lý','Y học','Tin học','Kỹ năng sống'];
+        $chudeDesc = ['Sách thiếu nhi','Sách về gia đình và hôn nhân','Sách về tâm lý học','Sách tin học','Sách về kỹ năng sống'];
         //......And more than array if here is more than 2 columns in your table db, except the timestamp columns
         $trangThai = 1;
 
-        for($i=1; $i <= $n; $i++){
+        for($i=0; $i <= $n; $i++){
+            $id = guid();
             array_push($list,[
-                //TODO insert each column info with each element.
+                'cd_ma' => $id,
+                'cd_ten' => $chude[$i],
+                'cd_dienGiai' => $chudeDesc[$i],
+                'cd_trangThai' => $trangThai
             ]);
         }
         DB::table('...TableSeeder')->insert($list);

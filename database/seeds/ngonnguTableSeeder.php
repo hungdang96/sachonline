@@ -13,19 +13,20 @@ class ngonnguTableSeeder extends Seeder
     public function run()
     {
         //khởi tạo carbon
-        $now = Carbon::now();
+        // $now = Carbon::now();
         //Tạo mảng rỗng $list[]
         $list = [];
         //Khởi tạo các giá trị
-        $n = 6;
-        $FirstColElements = [];
-        $SecondColElements = [];
-        //......And more than array if here is more than 2 columns in your table db, except the timestamp columns
-        $trangThai = 1;
+        $n = 5;
+        $lang = ['Tiếng Việt','Tiếng Anh','Tiếng Nhật','Tiếng Hàn Quốc','Tiếng Nga'];
+        $locale = ['vi','en','jp','kr','ru'];
 
-        for($i=1; $i <= $n; $i++){
+        for($i=0; $i <= $n; $i++){
+            $id = guid();
             array_push($list,[
-                //TODO insert each column info with each element.
+                'nn_ma'=>$id,
+                'nn_ten'=>$lang[$i],
+                'kihieu'=>$locale[$i]
             ]);
         }
         DB::table('...')->insert($list);

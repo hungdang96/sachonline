@@ -25,11 +25,12 @@ class quyenTableSeeder extends Seeder
         $today = new DateTime('2018-03-03 16:00:00');
         $trangThai = 1;
         //array_push($qList,[$giamdoc,$quantri,$quanlykho,$ketoan,$nvbanhang,$nvgiaohang]);
-        for($i=1; $i <= $nQuyen; $i++){
+        for($i=0; $i <= $nQuyen; $i++){
+            $id = guid();
             array_push($list,[
-                'q_ma' => $i,
-                'q_ten' => $quyenElement[$i-1],
-                'q_dienGiai' => $quyenDesc[$i-1],
+                'q_ma' => $id,
+                'q_ten' => $quyenElement[$i],
+                'q_dienGiai' => $quyenDesc[$i],
                 'q_tao' => $today,
                 'q_capNhat' => $today,
                 'q_trangThai' => $trangThai

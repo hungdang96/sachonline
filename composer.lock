@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "content-hash": "682cad510588fc0d8e3b75ce27d0e419",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -986,6 +986,63 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "sudiptpa/guid",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sudiptpa/guid.git",
+                "reference": "fcf568932d7342ab23c19eb94f7a2020a569ec86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sudiptpa/guid/zipball/fcf568932d7342ab23c19eb94f7a2020a569ec86",
+                "reference": "fcf568932d7342ab23c19eb94f7a2020a569ec86",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Sujip\\Guid\\GuidServiceProvider"
+                    ],
+                    "aliases": {
+                        "Guid": "Sujip\\Guid\\Facades\\Guid"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sujip\\Guid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sujip Thapa",
+                    "email": "sudiptpa@gmail.com",
+                    "homepage": "https://sujipthapa.co",
+                    "role": "Senior Developer"
+                }
+            ],
+            "description": "A Simple GUID generator Package for PHP.",
+            "keywords": [
+                "guid"
+            ],
+            "time": "2017-10-06T14:18:56+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

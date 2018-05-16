@@ -53,6 +53,7 @@ class ComposerStaticInit4e320bf9e93807e8d11144d596af9ff4
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Sujip\\Guid\\' => 11,
         ),
         'R' => 
         array (
@@ -177,6 +178,10 @@ class ComposerStaticInit4e320bf9e93807e8d11144d596af9ff4
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Sujip\\Guid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sudiptpa/guid/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -304,7 +309,7 @@ class ComposerStaticInit4e320bf9e93807e8d11144d596af9ff4
         'App\\Http\\Controllers\\sachController' => __DIR__ . '/../..' . '/app/Http/Controllers/sachController.php',
         'App\\Http\\Controllers\\tacgiaController' => __DIR__ . '/../..' . '/app/Http/Controllers/tacgiaController.php',
         'App\\Http\\Controllers\\thanhtoanController' => __DIR__ . '/../..' . '/app/Http/Controllers/thanhtoanController.php',
-        'App\\Http\\Controllers\\theloaiController' => __DIR__ . '/../..' . '/app/Http/Controllers/theloaiController.php',
+        'App\\Http\\Controllers\\theloaiController' => __DIR__ . '/../..' . '/app/Http/Controllers/TheloaiController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -343,14 +348,14 @@ class ComposerStaticInit4e320bf9e93807e8d11144d596af9ff4
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'CreateChitietdonhangTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153515_create_chitietdonhang_table.php',
         'CreateChitietnhapTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153616_create_chitietnhap_table.php',
-        'CreateChudeTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153439_create_chude_table.php',
+        'CreateChudeTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153240_create_chude_table.php',
         'CreateChudekhuyenmaiTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153537_create_chudekhuyenmai_table.php',
-        'CreateDichgiaTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153404_create_dichgia_table.php',
+        'CreateDichgiaTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153238_create_dichgia_table.php',
         'CreateDonhangTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152818_create_donhang_table.php',
         'CreateGopyTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153456_create_gopy_table.php',
         'CreateHinhanhTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153420_create_hinhanh_table.php',
         'CreateHoadonleTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153555_create_hoadonle_table.php',
-        'CreateKhachhangTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153020_create_khachhang_table.php',
+        'CreateKhachhangTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152735_create_khachhang_table.php',
         'CreateKhuyenmaiTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152756_create_khuyenmai_table.php',
         'CreateNgonnguTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153221_create_ngonngu_table.php',
         'CreateNhanvienTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152734_create_nhanvien_table.php',
@@ -359,7 +364,7 @@ class ComposerStaticInit4e320bf9e93807e8d11144d596af9ff4
         'CreatePhieunhapTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152919_create_phieunhap_table.php',
         'CreateQuyenTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152518_create_quyen_table.php',
         'CreateSachTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153241_create_sach_table.php',
-        'CreateTacgiaTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153303_create_tacgia_table.php',
+        'CreateTacgiaTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153239_create_tacgia_table.php',
         'CreateThanhtoanTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152816_create_thanhtoan_table.php',
         'CreateTheloaiTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_153140_create_theloai_table.php',
         'CreateVanchuyenTable' => __DIR__ . '/../..' . '/database/migrations/2018_02_01_152817_create_vanchuyen_table.php',
@@ -2777,6 +2782,9 @@ class ComposerStaticInit4e320bf9e93807e8d11144d596af9ff4
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'Sujip\\Guid\\Facades\\Guid' => __DIR__ . '/..' . '/sudiptpa/guid/src/Sujip/Guid/Facades/Guid.php',
+        'Sujip\\Guid\\Guid' => __DIR__ . '/..' . '/sudiptpa/guid/src/Sujip/Guid/Guid.php',
+        'Sujip\\Guid\\GuidServiceProvider' => __DIR__ . '/..' . '/sudiptpa/guid/src/Sujip/Guid/GuidServiceProvider.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',

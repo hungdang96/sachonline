@@ -13,21 +13,20 @@ class dichgiaTableSeeder extends Seeder
     public function run()
     {
         //khởi tạo carbon
-        $now = Carbon::now();
+//        $now = Carbon::now();
         //Tạo mảng rỗng $list[]
         $list = [];
-        $faker = Faker\Factory::create("vi_VN");
+//        $faker = Faker\Factory::create("vi_VN");
         //Khởi tạo các giá trị
         $n = 6;
         $DGname = ['Hồng Nhật', 'Bảo Long', 'Huỳnh Lý', 'Vũ Thái Hà', 'Trần Lan Anh', 'Trần Thị Thùy Trang'];
 
-        for($i=1; $i <= $n; $i++){
-            $id_temp = $faker->bothify('DG-A###');
-            $id = $faker->toUpper($id_temp);
+        for($i=0; $i <= $n; $i++){
+            $id = guid();
             array_push($list,[
                 //TODO insert each column info with each element.
                 'dg_ma' => $id,
-                'dg_ten' => $DGname[$i-1],
+                'dg_ten' => $DGname[$i],
 
             ]);
         }

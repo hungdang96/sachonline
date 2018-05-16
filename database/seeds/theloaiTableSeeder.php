@@ -12,22 +12,20 @@ class theloaiTableSeeder extends Seeder
      */
     public function run()
     {
-        //khởi tạo carbon
-        $now = Carbon::now();
         //Tạo mảng rỗng $list[]
         $list = [];
         //Khởi tạo các giá trị
         $n = 6;
-        $tl_ma = ['TL_01','TL_02','TL_03','TL_04','TL_05','TL_06'];
         $tl_ten = ['Truyện ngắn','Tiểu thuyết','Ngôn tình','Hư cấu','Kinh dị','Bài báo'];
         //......And more than array if here is more than 2 columns in your table db, except the timestamp columns
         $trangThai = 1;
 
-        for($i=1; $i <= $n; $i++){
+        for($i=0; $i <= $n; $i++){
+            $id = guid();
             array_push($list,[
                 //TODO insert each column info with each element.
-                'tl_ma' => $tl_ma[$i-1],
-                'tl_ten' => $tl_ten[$i-1],
+                'tl_ma' => $id,
+                'tl_ten' => $tl_ten[$i],
                 'tl_trangThai' => $trangThai
             ]);
         }

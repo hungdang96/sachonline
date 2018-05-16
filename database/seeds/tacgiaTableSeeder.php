@@ -23,14 +23,12 @@ class tacgiaTableSeeder extends Seeder
         $SecondColElements = ['Việt Nam', 'Việt Nam', 'Việt Nam', 'Việt Nam', 'Việt Nam', 'Việt Nam', 'Việt Nam', 'Việt Nam', 'Barazil', 'Pháp', 'Mỹ', 'Nhật', 'Mỹ', 'Pháp', 'Canada', 'Indonesia'];
         //......And more than array if here is more than 2 columns in your table db, except the timestamp columns
 
-        for($i=1; $i <= $n; $i++){
-            $id_temp = $faker->bothify('TG-A###');
-            $id = $faker->toUpper($id_temp);
+        for($i=0; $i <= $n; $i++){
+            $id = guid();
             array_push($list,[
-                //TODO insert each column info with each element.
                 'tg_ma' => $id,
-                'tg_ten' => $FirstColElements[$i-1],
-                'tg_quocTich' => $SecondColElements[$i-1]
+                'tg_ten' => $FirstColElements[$i],
+                'tg_quocTich' => $SecondColElements[$i]
             ]);
         }
         DB::table('tacgia')->insert($list);
