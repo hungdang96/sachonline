@@ -14,20 +14,20 @@ class CreatePhieunhapTable extends Migration
     public function up()
     {
         Schema::create('phieunhap', function (Blueprint $table) {
-            $table->string('pn_ma', 20);
-            $table->string('pn_nguoiGiao', 100);
+            $table->string('pn_ma', 80);
+            $table->string('pn_nguoiGiao', 80);
             $table->string('pn_soHoaDon', 15);
             $table->dateTime('pn_ngayXuatHoaDon')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('nv_nguoiLapPhieu', 20);
+            $table->string('nv_nguoiLapPhieu', 80);
             $table->dateTime('pn_ngayNhapPhieu')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('nv_keToan', 20);
+            $table->string('nv_keToan', 80);
             $table->dateTime('pn_ngayXacNhan')->default(NULL);
-            $table->string('nv_thuKho', 20);
+            $table->string('nv_thuKho', 80);
             $table->dateTime('pn_ngayNhapKho')->default(NULL);
-            $table->timestamp('pn_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('pn_capNhat')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->unsignedTinyInteger('pn_trangThai')->default('2');
-            $table->string('nph_maFK', 20);
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->unsignedTinyInteger('pn_trangThai')->default('1');
+            $table->string('nph_maFK', 80);
 
             $table->primary('pn_ma');
             $table->foreign('nph_maFK')->references('nph_ma')->on('nhaphathanh')

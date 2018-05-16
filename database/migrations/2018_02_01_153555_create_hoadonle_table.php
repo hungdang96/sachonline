@@ -14,14 +14,14 @@ class CreateHoadonleTable extends Migration
     public function up()
     {
         Schema::create('hoadonle', function (Blueprint $table) {
-            $table->string('hdl_ma', 20);
-            $table->unsignedInteger('hdl_nguoiMuaHang');
+            $table->string('hdl_ma', 80);
+            $table->string('hdl_nguoiMuaHang',80);
             $table->string('hdl_dienThoai', 15);
             $table->string('hdl_diaChi', 250);
-            $table->string('nv_lapHoaDon', 20);
+            $table->string('nv_lapHoaDon', 80);
             $table->dateTime('hdl_ngayXuatHoaDon')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('dh_maFK', 20);
+            $table->string('dh_maFK', 80);
 
             $table->primary(['hdl_ma']);
             $table->foreign('dh_maFK')

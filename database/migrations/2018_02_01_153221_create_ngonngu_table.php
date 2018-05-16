@@ -14,7 +14,7 @@ class CreateNgonnguTable extends Migration
     public function up()
     {
         Schema::create('ngonngu', function (Blueprint $table) {
-            $table->string('nn_ma', 20);
+            $table->string('nn_ma', 80);
             $table->string('nn_ten', 50);
 
             $table->primary(['nn_ma']);

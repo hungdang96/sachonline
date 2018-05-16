@@ -20,9 +20,9 @@ class CreateSachTable extends Migration
             $table->unsignedInteger('s_giaBan');
             $table->unsignedInteger('s_soTrang');
             $table->dateTime('s_namXuatBan');
-            $table->timestamp('s_tao')
+            $table->timestamp('created_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('s_capNhat')
+            $table->timestamp('updated_at')
                 ->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->string('s_kichThuoc', 10);
             $table->unsignedInteger('s_danhGia');
@@ -30,12 +30,12 @@ class CreateSachTable extends Migration
             $table->unsignedSmallInteger('s_trangThai')
                 ->default('1');
             $table->text('s_gioiThieu');
-            $table->string('nxb_maFK', 20);
-            $table->string('tl_maFK', 20);
-            $table->string('nn_maFK', 20);
-            $table->string('cd_maFK', 20);
-            $table->string('tg_maFK', 20);
-            $table->string('dg_maFK', 20);
+            $table->string('nxb_maFK', 80);
+            $table->string('tl_maFK', 80);
+            $table->string('nn_maFK', 80);
+            $table->string('cd_maFK', 80);
+            $table->string('tg_maFK', 80);
+            $table->string('dg_maFK', 80);
 
             $table->primary('s_sku');
             $table->foreign('nxb_maFK')->references('nxb_ma')

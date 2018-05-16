@@ -14,7 +14,7 @@ class CreateHinhanhTable extends Migration
     public function up()
     {
         Schema::create('hinhanh', function (Blueprint $table) {
-            $table->unsignedInteger('ha_ma')->autoIncrement();
+            $table->string('ha_ma',80);
             $table->string('ha_ten', 150);
             $table->string('s_maFK', 20);
 
